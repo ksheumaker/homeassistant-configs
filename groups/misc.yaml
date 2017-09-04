@@ -1,0 +1,44 @@
+# -----------------------------------------
+#  Misc
+# -----------------------------------------
+misc:
+  name: Misc
+  view: yes
+  entities:
+    - group.alarm
+    - group.people
+    - group.weather
+    - group.misc_zwave
+    - group.interior_lights
+    - group.exterior_lights
+    - input_boolean.bedtime
+    - input_boolean.basement_door_alarm
+    - script.bedtime
+    - group.zones
+
+alarm:
+  name: Alarm Clock
+  control: hidden
+  entities:
+    - sensor.alarm_time
+    - input_slider.alarmhour
+    - input_slider.alarmminutes
+    - input_boolean.alarmstatus
+    - input_boolean.alarmweekday
+
+misc_zwave:
+  name: ZWave Devices
+  entities:
+    - zwave.living_room_fan
+    - zwave.bedroom_fan
+    - zwave.bookcase_left
+    - zwave.bookcase_right
+    - zwave.front_door
+    - zwave.basement_door
+    - zwave.pantry_door
+    - zwave.garage_door
+    - zwave.motion_1
+    - zwave.stair_motion
+    - zwave.stair_motion_top
+    - zwave.usb_controller
+

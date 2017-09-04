@@ -1,0 +1,12 @@
+basement_door_state:
+  value_template: >-
+    {% if is_state("sensor.basement_door_alarm_level", "255") %}
+      {%- if is_state("sensor.basement_door_burglar", "3") -%}
+        tampered
+      {%- else -%}
+        open
+      {%- endif %}
+    {%- else -%}
+      closed
+    {%- endif %} 
+  friendly_name: 'Basement Door'

@@ -1,0 +1,34 @@
+# -----------------------------------------
+#  Lighting groups
+# -----------------------------------------
+interior_lights:
+  name: Interior Lights
+  entities:
+    - light.bathroom
+    - light.bedroom_light
+    - light.cabinets_left
+    - light.cabinets_right
+    - light.dining_room
+    - light.hall
+    - light.kitchen_lamp
+    - light.kitchen_lights
+    - light.laundry
+    - light.living_room_fan_light
+    - light.floor_lamp
+    - light.pantry
+    - light.stair
+    - light.toliet
+    - light.tv_lights
+    - light.upstairs_hall
+    - switch.bookcase_left_switch
+    - switch.bookcase_right_switch
+    - switch.garage_florecent
+    - switch.garage_stair
+
+exterior_lights:
+  name: Exterior Lights
+  entities:
+    - light.deck
+    - light.deck_accent
+    - light.porch
+

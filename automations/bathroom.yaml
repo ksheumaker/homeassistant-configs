@@ -1,0 +1,19 @@
+# ---------------------------------
+#  Bathroom lights
+# ---------------------------------
+- alias: Turn toliet on with bathroom
+  trigger:
+    platform: state
+    entity_id: light.bathroom
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.toliet
+- alias: Turn toliet off with bathroom
+  trigger:
+    platform: state
+    entity_id: light.bathroom
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id: light.toliet

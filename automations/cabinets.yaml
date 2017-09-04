@@ -1,0 +1,26 @@
+# ---------------------------------
+#  Kitchen Cabinets Lights
+# ---------------------------------
+- alias: Turn cabinets on with kitchen
+  trigger:
+    platform: state
+    entity_id: light.kitchen_lights
+    to: 'on'
+  action:
+    service: light.turn_on
+    data:
+      brightness: 255
+      kelvin: 2700
+      entity_id: 
+        - light.cabinets_left
+        - light.cabinets_right
+- alias: Turn cabinets off with kitchen
+  trigger:
+    platform: state
+    entity_id: light.kitchen_lights
+    to: 'off'
+  action:
+    service: light.turn_off
+    entity_id: 
+      - light.cabinets_left
+      - light.cabinets_right

@@ -1,0 +1,119 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 226
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+
+  # customize:    
+  #binary_sensor.floorplan:
+  #    custom_ui_state_card: floorplan
+  #    config: !include floorplans/kylehouse.yaml
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+  ignore:
+    - wink
+
+
+# Enables support for tracking state changes over time
+history:
+  exclude:
+    entities:
+      - sensor.current_time
+      - sensor.current_date
+    domains:
+      - zwave
+      - sun
+
+# View all events in a logbook
+logbook:
+  exclude:
+    entities:
+      - sensor.current_time
+      - sensor.current_date
+    domains:
+      - zwave
+      - sun
+
+# Track the sun
+sun:
+
+zone: !include_dir_merge_list zones/
+
+remote: !include_dir_merge_list remotes/
+
+tts:
+  - platform: google
+
+alexa:
+
+juicenet:
+  access_token: !secret juicenet_key
+
+ecobee:
+  api_key: !secret ecobee_key
+
+ring:
+  username: !secret ring_user
+  password: !secret ring_password
+
+zwave:
+  usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
+
+lutron_caseta:
+  host: !secret lutron_ip
+
+light:
+  - platform: osramlightify
+    host: !secret lightify_ip
+    allow_lightify_groups: False
+
+alarm_control_panel:
+  platform: manual
+  name: “Alarm”
+
+emulated_hue:
+
+mqtt:
+  broker: !secret mqtt_ip
+
+ios:
+
+panel_custom: !include_dir_merge_list panels/
+
+sensor: !include_dir_merge_list sensors/
+binary_sensor: !include_dir_merge_list binary_sensors/
+
+input_boolean: !include_dir_merge_named inputs/boolean/
+input_slider: !include_dir_merge_named inputs/slider/
+
+group: !include_dir_merge_named groups/
+automation: !include_dir_merge_list automations/
+scene: !include_dir_merge_list scenes/
+script: !include_dir_merge_named scripts/
+intent_script: !include_dir_merge_named intents/
+
+device_tracker: !include_dir_merge_list trackers/
+

@@ -1,0 +1,20 @@
+# -----------------------------------------
+#  Upstairs Hall
+# -----------------------------------------
+upstairs:
+  view: yes
+  name: Upstairs
+  entities:
+    - group.upstairs_lights
+    - group.upstairs_sensors
+upstairs_lights:
+  name: Lighting
+  entities:
+    - light.upstairs_hall
+    - light.stair
+    - light.laundry
+upstairs_sensors:
+  name: Sensors
+  entities:
+    - binary_sensor.stair_motion_sensor
+    - binary_sensor.stair_motion_top_sensor

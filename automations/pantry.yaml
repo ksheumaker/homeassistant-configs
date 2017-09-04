@@ -1,0 +1,20 @@
+# ---------------------------------
+#  Pantry Door
+# ---------------------------------
+- alias: Pantry On with door sensor
+  trigger:
+    platform: state
+    entity_id: sensor.pantry_door_state
+    to: 'open'
+  action:
+    service: light.turn_on
+    entity_id: light.pantry
+
+- alias: Pantry Off with door sensor
+  trigger:
+    platform: state
+    entity_id: sensor.pantry_door_state
+    to: 'closed'
+  action:
+    service: light.turn_off
+    entity_id: light.pantry

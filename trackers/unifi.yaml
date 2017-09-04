@@ -1,0 +1,7 @@
+- platform: unifi
+  host: !secret unifi_ip
+  port: !secret unifi_port
+  username: !secret unifi_user
+  password: !secret unifi_password
+  verify_ssl: False
+  track_new_devices: no

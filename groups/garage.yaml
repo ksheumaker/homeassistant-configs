@@ -1,0 +1,32 @@
+# -----------------------------------------
+#  Garage
+# -----------------------------------------
+garage:
+  view: yes
+  name: Garage
+  entities:
+    - group.garage_lights
+    - group.garage_sensors
+    - group.evse_sensors
+garage_lights:
+  name: Lighting
+  entities:
+    - switch.garage_stair
+    - switch.garage_florecent
+garage_sensors:
+  name: Sensors
+  entities:
+    - sensor.basement_door_state
+    - binary_sensor.garage_door_sensor
+    - sensor.garage_motion_state
+    - sensor.garage_motion_temperature
+evse_sensors:
+  name: EVSE
+  entities:
+    - sensor.garage_charging_status
+    - sensor.garage_voltage
+    - sensor.garage_watts
+    - sensor.garage_amps
+    - sensor.garage_charge_time
+    - sensor.garage_energy_added
+    - sensor.garage_temperature

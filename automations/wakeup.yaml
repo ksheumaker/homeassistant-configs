@@ -1,0 +1,23 @@
+# ---------------------------------
+#  Shades to wake me up
+# ---------------------------------
+- alias: Open shades 7:15A M-F
+  trigger:
+    platform: time
+    at: '07:15:00'
+  condition:
+    condition: time
+    weekday:
+       - mon
+       - tue
+       - wed
+       - thu
+       - fri
+  action:
+    service: cover.set_cover_position
+    data:
+      position: 50
+      entity_id: 
+        - cover.bedroom_left
+        - cover.bedroom_right
+        - cover.bedroom_closet

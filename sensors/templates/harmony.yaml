@@ -1,0 +1,11 @@
+living_room_tv:
+  value_template: '{{ states.remote.living_room.attributes.current_activity }}'
+  friendly_name: 'Living Room TV'
+
+bedroom_tv:
+  value_template: '{{ states.remote.bedroom.attributes.current_activity }}'
+  friendly_name: 'Bedroom TV'
+
+kitchen_tv:
+  value_template: '{{ states.remote.kitchen.attributes.current_activity }}'
+  friendly_name: 'Kitchen TV'

@@ -1,0 +1,4 @@
+basement_door_alarm:
+  name: Alert basement door open
+  initial: on
+  icon: mdi:lock-icon

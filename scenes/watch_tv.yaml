@@ -1,0 +1,9 @@
+- name: Watch TV
+  entities:
+    switch.bookcase_left_switch: on
+    switch.bookcase_right_switch: on
+    light.tv_lights:
+      state: on
+      kelvin: 2700
+      brightness: 150
+

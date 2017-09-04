@@ -1,0 +1,15 @@
+WeatherIntent:
+  speech:
+    type: plain
+    text: >
+      Dark Sky reports - Hi Kyle
+TempsIntent:
+  speech:
+    type: plain
+    text: >
+      the living room is {{ states('sensor.living_room_temperature') | round }},
+      the kitchen is {{ states('sensor.hearth_room_temperature') | round }},
+      the bedroom is {{ states('sensor.master_bedroom_temperature') | round }},
+      the office is {{ states('sensor.office_temperature') | round }},
+      the garage is {{ states('sensor.garage_motion_temperature') | round }}.
+      It is currently {{ states('sensor.dark_sky_temperature') | round }} outside.

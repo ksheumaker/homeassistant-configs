@@ -1,0 +1,26 @@
+# ---------------------------------
+# Lock changed
+# ---------------------------------
+- alias: Notification Text - Lock unlocked
+  trigger:
+    platform: state
+    entity_id: lock.front_door_locked
+    from: 'locked'
+    to: 'unlocked'
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: >
+        Front door {{ states.sensor.front_lock_last_action2.state }}
+
+- alias: Notification Text - Lock locked
+  trigger:
+    platform: state
+    entity_id: lock.front_door_locked
+    from: 'unlocked'
+    to: 'locked'
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: >
+        Front door {{ states.sensor.front_lock_last_action2.state }}

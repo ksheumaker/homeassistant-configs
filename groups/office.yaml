@@ -1,0 +1,13 @@
+# -----------------------------------------
+#  Office
+# -----------------------------------------
+office:
+  view: yes
+  name: Office
+  entities:
+    - group.office_sensors
+office_sensors:
+  name: Sensors
+  entities:
+    - sensor.office_temperature
+    - binary_sensor.office_occupancy

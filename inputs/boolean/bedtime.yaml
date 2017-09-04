@@ -1,0 +1,4 @@
+bedtime:
+  name: Bedtime
+  initial: off
+  icon: mdi:hotel

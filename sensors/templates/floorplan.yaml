@@ -1,0 +1,15 @@
+current_time:
+  friendly_name: 'Current Time'
+  value_template: '{{ now().strftime("%I:%M %p") }}'
+
+current_date:
+  friendly_name: 'Current Date'
+  value_template: '{{ now().strftime("%A, %B %d") }}'
+
+hvac_high_temp:
+  friendly_name: 'HVAC high temp'
+  value_template: '{{states.climate.hearth_room.attributes.target_temp_high }}'
+
+hvac_low_temp:
+  friendly_name: 'HVAC low temp'
+  value_template: '{{states.climate.hearth_room.attributes.target_temp_low }}'

@@ -1,0 +1,4 @@
+alarm_time:
+  friendly_name: 'Alarm Time'
+  value_template: '{{ states.input_slider.alarmhour.state | int }}:{% if states.input_slider.alarmminutes.state|int < 10 %}0{% endif %}{{ states.input_slider.alarmminutes.state | int }}'
+

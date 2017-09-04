@@ -1,0 +1,51 @@
+# -----------------------------------------
+#  Living room
+# -----------------------------------------
+default_view:
+  view: yes
+  name: Living Room
+  entities:
+    - group.living_door
+    - group.living_lights
+    - group.living_entertainment
+    - group.living_climate
+    - group.living_sensors
+living_lights:
+  name: Lighting
+  entities:
+    - light.living_room_fan_light
+    - light.tv_lights
+    - switch.bookcase_left_switch
+    - switch.bookcase_right_switch
+    - light.downstairs_hall
+    - light.floor_lamp
+    - light.porch
+    - light.hall
+    - scene.watch_tv
+living_door:
+  name: Door
+  icon: mdi:rotate-right-variant
+  entities:
+    - lock.front_door_locked
+    - sensor.front_door_state
+    - sensor.front_lock_code
+    - sensor.front_lock_last_action2
+    - binary_sensor.ring_front_door_motion
+    - binary_sensor.ring_front_door_ding
+living_climate:
+  name: Climate
+  entities:
+    - fan.living_room_fan_level
+    - sensor.living_room_temperature
+    - sensor.motion_1_temperature
+living_sensors:
+  name: Sensors
+  entities:
+    - sensor.motion_1_state
+    - binary_sensor.living_room_occupancy
+    - sensor.basement_door_state
+living_entertainment:
+  name: Entertainment
+  entities:
+    - sensor.living_room_tv
+    - remote.living_room

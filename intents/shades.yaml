@@ -1,0 +1,8 @@
+ShadesIntent:
+   action:
+     service: scene.turn_on
+     data_template: 
+       entity_id: scene.shades__{{ ShadeScene }}
+   speech:
+     type: plain
+     text: OK

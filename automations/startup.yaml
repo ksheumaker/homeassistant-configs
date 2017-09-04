@@ -1,0 +1,15 @@
+# ---------------------------------
+# send me a notification
+# ---------------------------------
+- alias: Notification Text - Home Assistant Start
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: notify.ios_kyles_gigantic_iphone_7
+      data:
+        message: Home Assistant Started
+    - service: tts.google_say
+      entity_id: media_player.kitchen
+      data:
+        message: Home Assistant Started

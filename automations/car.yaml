@@ -1,0 +1,16 @@
+# ---------------------------------
+# Car not plugged in
+# ---------------------------------
+- alias: Car not plugged in at night
+  trigger:
+    platform: time
+    at: '22:05:00'
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.garage_charging_status.state == "standby" }}'
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: >
+        Car not plugged in to charger
+

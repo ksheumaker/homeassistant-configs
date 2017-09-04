@@ -1,0 +1,46 @@
+# ---------------------------------
+# Alarm
+# ---------------------------------
+- alias: 'Wake Me Up'
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 0
+  condition:
+    - condition: template
+      value_template: '{{ now().time().strftime("%H:%M") == states.sensor.alarm_time.state }}'
+    - condition: or
+      conditions:
+        - condition: and
+          conditions:
+            - condition: state
+              entity_id: input_boolean.alarmstatus
+              state: 'on'
+            - condition: state
+              entity_id: input_boolean.alarmweekday
+              state: 'on'
+            - condition: time
+              weekday:
+                - mon
+                - tue
+                - wed
+                - thu
+                - fri
+        - condition: and
+          conditions:
+            - condition: state
+              entity_id: input_boolean.alarmstatus
+              state: 'on'
+            - condition: state
+              entity_id: input_boolean.alarmweekday
+              state: 'off'
+  action:
+    - service: notify.ios_kyles_gigantic_iphone_7
+      data:
+        message: > 
+          Alarm went off
+    - service: tts.google_say
+      entity_id: media_player.kitchen
+      data:
+        message: Alarm going off, get up!
+

@@ -1,0 +1,40 @@
+# -----------------------------------------
+#  Master Bedroom 
+# -----------------------------------------
+bedroom:
+  view: yes
+  name: Master Bed
+  entities:
+    - group.bedroom_lights
+    - group.bedroom_climate
+    - group.bedroom_shades
+    - group.bedroom_sensors
+bedroom_lights:
+  name: Lighting
+  entities:
+    - light.bedroom_light
+    - light.bathroom
+    - light.toliet
+bedroom_shades:
+  name: Shades
+  entities:
+    - scene.shades__open
+    - scene.shades__closed
+    - scene.shades__cat
+    - cover.bedroom_right
+    - cover.bedroom_left
+    - cover.bedroom_closet
+bedroom_sensors:
+  name: Sensors
+  entities:
+    - binary_sensor.master_bedroom_occupancy
+bedroom_climate:
+  name: Climate
+  entities:
+    - fan.bedroom_fan_level
+    - sensor.master_bedroom_temperature
+    - binary_sensor.master_bedroom_occupancy
+bedroom_entertainment:
+  name: Entertainment
+  entities:
+    - remote.bedroom_apple_tv

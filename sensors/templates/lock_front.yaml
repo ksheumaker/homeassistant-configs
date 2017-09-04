@@ -1,0 +1,51 @@
+front_lock_battery:
+  entity_id: zwave.front_door
+  value_template: "{{ states.zwave.front_door.attributes.battery_level }}"
+  friendly_name: 'Front Door Lock Battery'
+  unit_of_measurement: '%'
+
+front_lock_code:
+  friendly_name: Front Door Last Code
+  entity_id:
+    - sensor.front_door_alarm_type
+    - sensor.front_door_alarm_level
+  value_template: >-
+    {% if is_state('sensor.front_door_alarm_type', '18') or
+          is_state('sensor.front_door_alarm_type', '19') %}
+      {% if not is_state('sensor.front_doored_alarm_level', '0') %}
+        {{states('sensor.front_door_alarm_level')}}
+      {% else %}
+        {# just provide previous value if no user code entered #}
+        {{states('sensor.front_lock_code')}}
+      {% endif %}
+    {% else %}
+      {# just provide previous value if no user code entered #}
+      {{states('sensor.front_lock_code')}}
+    {% endif %}
+
+front_lock_last_action2:
+  friendly_name: 'Front Door Lock Last Action'
+  entity_id:
+    - sensor.front_door_alarm_type
+    - sensor.front_door_alarm_level
+  value_template: >-
+    {% if is_state('sensor.front_door_alarm_type', '18') %}
+      {% if is_state('sensor.front_door_alarm_level', '0') %}
+    Locked: Outside Keypad
+      {% else %}
+    Locked: User {{states('sensor.front_door_alarm_level')}}
+      {% endif %}
+    {% elif is_state('sensor.front_door_alarm_type', '19') %}
+      Unlocked: User Code {{states('sensor.front_door_alarm_level')}}
+    {% elif is_state('sensor.front_door_alarm_type', '21') %}
+      Locked: {{[ 'Outside Lock', 'Inside Deadbolt', 'Outside Keypad' ][states('sensor.front_door_locked_alarm_level')|int]}}
+    {% elif is_state('sensor.front_door_alarm_type', '22') %}
+      Unlocked: Inside Deadbolt
+    {% else %}
+      Unknown: {{states('sensor.front_door_alarm_type')}}/{{states('sensor.front_door_locked_alarm_level')}}
+    {% endif %}
+
+front_lock_last_action:
+  friendly_name: 'Front Door Last Action'
+  value_template: > 
+     {{ states.lock.front_door_locked.attributes.notification }} ({{ states.lock.front_door_locked.attributes.lock_status }})

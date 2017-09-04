@@ -1,0 +1,26 @@
+- name: Shades - Cat
+  entities:
+    cover.bedroom_closet: 
+      position: 0
+    cover.bedroom_left: 
+      position: 0
+    cover.bedroom_right: 
+      position: 20
+
+- name: Shades - Open
+  entities:
+    cover.bedroom_closet: 
+      position: 100
+    cover.bedroom_left: 
+      position: 100
+    cover.bedroom_right: 
+      position: 100
+
+- name: Shades - Closed
+  entities:
+    cover.bedroom_closet: 
+      position: 0
+    cover.bedroom_left: 
+      position: 0
+    cover.bedroom_right: 
+      position: 100

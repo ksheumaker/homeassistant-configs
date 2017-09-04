@@ -1,0 +1,53 @@
+# ---------------------------------
+#  Garage Door
+# ---------------------------------
+
+- alias: Notification - Garage Door Opened
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_door_sensor
+    from: 'off'
+    to: 'on'
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: > 
+        Garage Door Opened
+
+- alias: Notification - Garage Door Closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_door_sensor
+    from: 'on'
+    to: 'off'
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: >
+        Garage Door Closed
+
+- alias: Garage Light On with garage door open
+  trigger:
+    platform: state
+    entity_id: binary_sensor.garage_door_sensor
+    to: 'on'
+    from: 'off'
+  action:
+    service: switch.turn_on
+    entity_id: 
+      - switch.garage_florecent
+      - switch.garage_stairs
+
+- alias: Garage Light Off with garage door closed
+  trigger:
+    platform: state
+    entity_id: sensor.basement_door_state
+    to: 'off'
+    from: 'on'
+    for:
+      minutes: 10
+  action:
+    service: switch.turn_off
+    entity_id: 
+      - switch.garage_florecent
+      - switch.garage_stairs

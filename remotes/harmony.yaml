@@ -1,0 +1,11 @@
+- platform: harmony
+  name: Living Room
+  activity: Watch TV
+  scan_interval: 15
+
+- platform: harmony
+  name: Kitchen
+  activity: Watch TV
+  scan_interval: 15
+
+

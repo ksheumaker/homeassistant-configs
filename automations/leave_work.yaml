@@ -1,0 +1,16 @@
+# ---------------------------------
+# Leave work
+# ---------------------------------
+- alias: Leaving work
+  trigger:
+    platform: zone
+    entity_id: device_tracker.kyles_gigantic_iphone_7
+    zone: zone.work
+    event: leave
+  action:
+    service: notify.ios_kyles_gigantic_iphone_7
+    data:
+      message: >
+        Kyle has left work
+
+

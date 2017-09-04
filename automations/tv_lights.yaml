@@ -1,0 +1,31 @@
+# ---------------------------------
+#  Turn off TV lights when TV off
+# ---------------------------------
+- alias: TV accent off with TV
+  trigger:
+    platform: state
+    entity_id: remote.living_room
+  condition:
+    condition: template
+    value_template: '{{ trigger.to_state.attributes.current_activity == "PowerOff" }}'
+  action:
+    - service: switch.turn_off
+      entity_id: 
+        - switch.bookcase_left_switch
+        - switch.bookcase_right_switch
+    - service: light.turn_off
+      entity_id: light.tv_lights
+
+# ---------------------------------
+#  Turn on TV lights when TV turned on
+# ---------------------------------
+- alias: TV accent on with TV
+  trigger:
+    platform: state
+    entity_id: remote.living_room
+  condition:
+    condition: template
+    value_template: '{{ trigger.to_state.attributes.current_activity == "Watch TV" }}'
+  action:
+    service: scene.turn_on
+    entity_id: scene.watch_tv

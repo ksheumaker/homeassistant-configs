@@ -1,0 +1,40 @@
+# -----------------------------------------
+#  Kitchen 
+# -----------------------------------------
+kitchen:
+  view: yes
+  name: Kitchen
+  entities:
+    - group.kitchen_lights
+    - group.kitchen_climate
+    - group.kitchen_sensors
+    - group.kitchen_entertainment
+kitchen_lights:
+  name: Lighting
+  entities:
+    - light.kitchen_lights
+    - light.cabinets_left
+    - light.cabinets_right
+    - light.pantry
+    - light.dining_room
+    - light.kitchen_lamp
+kitchen_sensors:
+  name: Sensors
+  entities:
+    - sensor.pantry_door_state
+    - sensor.sliding_door_state
+    - binary_sensor.hearth_room_occupancy
+    - binary_sensor.pantry_door_opened
+    - sensor.kitchen_tv
+kitchen_climate:
+  name: Climate
+  entities:
+    - climate.hearth_room
+    - sensor.hearth_room_temperature
+    - sensor.hearth_room_humidity
+kitchen_entertainment:
+  name: Entertainment
+  entities:
+    - media_player.kitchen
+    - sensor.kitchen_tv
+    - remote.kitchen

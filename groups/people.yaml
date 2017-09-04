@@ -1,0 +1,10 @@
+# -----------------------------------------
+#  People
+# -----------------------------------------
+people:
+ name: People
+ entities:
+   - device_tracker.kyleiphoneunifi
+   - device_tracker.kyles_gigantic_iphone_7
+   - device_tracker.momiphone
+   - device_tracker.rochellesiphone

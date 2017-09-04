@@ -1,0 +1,9 @@
+zwave._:
+  ignored: false
+  polling_intensity: 0
+zwave.aeotec_zw090_zstick_gen5_us:
+  ignored: false
+  polling_intensity: 0
+light.level:
+  ignored: false
+  polling_intensity: 0

@@ -1,0 +1,223 @@
+      name: My House
+      image: /local/custom_ui/floorplan/kyle-house.svg
+      stylesheet: /local/custom_ui/floorplan/floorplan.css     
+
+      # These options are optional
+      # warnings:                  # enable warnings (to find out why things might ot be working correctly)
+      # pan_zoom:                  # enable experimental panning / zooming
+      hide_app_toolbar:          # hide the application toolbar (when used as a custom panel)
+      # date_format: DD-MMM-YYYY   # Date format to use in hover-over text
+      
+      #last_motion_entity: sensor.template_last_motion
+      #last_motion_class: last-motion
+
+      groups:
+
+        - name: TVs
+          entities:
+            - sensor.living_room_tv
+            - sensor.kitchen_tv
+            - sensor.bedroom_tv
+          states:
+            - state: 'Watch TV'
+              class: 'tv-on'
+            - state: 'Watch Apple TV'
+              class: 'tv-on'
+            - state: 'Play XBOX'
+              class: 'tv-on'
+            - state: 'Watch Smart TV'
+              class: 'tv-on'
+            - state: 'Play Wii U'
+              class: 'tv-on'
+            - state: 'Watch bluray'
+              class: 'tv-on'
+            - state: 'PowerOff'
+              class: 'tv-off'
+            - state: 'None'
+              class: 'tv-off'
+
+        - name: Fans
+          entities:
+            - fan.living_room_fan_level
+            - fan.bedroom_fan_level
+          states:
+            - state: 'on'
+              class: 'fan-on'
+            - state: 'off'
+              class: 'fan-off'
+
+        - name: Shades
+          entities:
+            - cover.bedroom_left
+            - cover.bedroom_right
+            - cover.bedroom_closet
+          states:
+            - state: 'open'
+              class: 'shades-open'
+            - state: 'closed'
+              class: 'shades-closed'
+
+        - name: Motion
+          entities:
+            - sensor.motion_1_state
+            - sensor.garage_motion_state
+          states:
+            - state: 'open'
+              class: 'motion-open'
+            - state: 'closed'
+              class: 'motion-closed'
+
+        - name: EVSE
+          entities:
+            - sensor.garage_charging_status
+          states:
+            - state: 'charging'
+              class: 'evse-charging'
+            - state: 'standby'
+              class: 'evse-standby'
+            - state: 'plugged'
+              class: 'evse-plugged'
+        
+        - name: Locks
+          entities:
+            - lock.front_door_locked
+          states:
+            - state: 'locked'
+              class: 'lock-locked'
+            - state: 'unlocked'
+              class: 'lock-unlocked'
+
+        - name: BinaryMotion
+          entities:
+            - binary_sensor.ring_front_door_motion
+            - binary_sensor.stair_motion_sensor
+            - binary_sensor.stair_motion_top_sensor
+          states:
+            - state: 'on'
+              class: 'motion-open'
+            - state: 'off'
+              class: 'motion-closed'
+
+        - name: DoorsBinary
+          entities:
+            - binary_sensor.garage_door_sensor
+          states:
+            - state: 'on'
+              class: 'door-open'
+            - state: 'off'
+              class: 'door-closed'
+
+        - name: Doors
+          entities:
+            - sensor.pantry_door_state
+            - sensor.basement_door_state
+            - sensor.sliding_door_state
+            - sensor.front_door_state
+          states:
+            - state: 'open'
+              class: 'door-open'
+            - state: 'closed'
+              class: 'door-closed'
+
+        - name: Buttons
+          entities: 
+             - input_boolean.bedtime
+          states:
+             - state: 'off'
+               class: 'button-off'
+             - state: 'on'
+               class: 'button-on'
+          action:
+            domain: homeassistant
+            service: toggle
+
+        - name: Lights
+          entities:
+             - light.tv_lights
+             - switch.bookcase_right_switch
+             - switch.bookcase_left_switch
+             - light.living_room_fan_light
+             - light.pantry
+             - light.porch
+             - light.hall
+             - light.stair
+             - switch.garage_stair
+             - light.deck
+             - light.dining_room
+             - light.kitchen_lamp
+             - light.cabinets_right
+             - light.cabinets_left
+             - light.kitchen_lights
+             - switch.garage_florecent
+             - light.laundry
+             - light.upstairs_hall
+             - light.toliet
+             - light.bathroom
+             - light.bedroom_light
+             - light.deck_accent
+             - light.floor_lamp
+          states:
+            - state: 'on'
+              class: 'light-on'
+            - state: 'off'
+              class: 'light-off'
+          action:
+            domain: homeassistant   # This optional parameter allows you to use other services such as homeassistant.toggle like here.
+            service: toggle
+
+        - name: occupancy
+          entities:
+            - binary_sensor.living_room_occupancy
+            - binary_sensor.hearth_room_occupancy
+            - binary_sensor.master_bedroom_occupancy
+            - binary_sensor.office_occupancy
+          states:
+            - state: 'on'
+              class: 'occupancy-on'
+            - state: 'off'
+              class: 'occupancy-off'
+
+        - name: hvac
+          entities:
+            - climate.hearth_room
+          class_template: '
+            var hvac_mode = entity.attributes.operation;
+            if (hvac_mode == "cool")
+              return "hvac-cool";
+            else if (hvac_mode == "heat")
+              return "hvac-cool";
+            else
+              return "hvac-idle";
+            '
+             
+                    
+#        - name: thermostat_temp
+#          entities:
+#            - climate.downstairs
+#            - climate.upstairs
+#          text_template: '${entity.attributes.current_temperature ? entity.attributes.current_temperature : "undefined"}'
+#
+# The above text_template uses extended attributes from the climate.* objects to get current temperature.
+
+        - name: text_states
+          entities:
+            - sensor.living_room_temperature          
+            - sensor.motion_1_temperature
+            - sensor.garage_motion_temperature
+            - sensor.hearth_room_temperature
+            - sensor.master_bedroom_temperature
+            - sensor.office_temperature
+            - sensor.current_time
+            - sensor.current_date
+            - sensor.dark_sky_temperature
+            - sensor.dark_sky_daily_high_temperature
+            - sensor.dark_sky_daily_low_temperature
+            - sensor.garage_amps
+            - sensor.garage_voltage
+            - sensor.hvac_low_temp
+            - sensor.hvac_high_temp
+            - sensor.dark_sky_hourly_summary
+            - sensor.dark_sky_summary
+          text_template: '${entity.state ? entity.state.replace(/\s{2,}/g,"") : "undefined"}'
+
+# The above text_template uses jQuery syntax to search and replace any instance of 2 consecutive (or more) spaces in a string of text.

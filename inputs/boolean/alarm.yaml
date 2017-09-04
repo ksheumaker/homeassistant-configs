@@ -1,0 +1,9 @@
+alarmstatus:
+  name: Alarm Enabled
+  initial: on
+  icon: mdi:alarm-check
+
+alarmweekday:
+  name: Weekdays Only
+  initial: on
+  icon: mdi:calendar
