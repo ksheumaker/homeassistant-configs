@@ -1,0 +1,4 @@
+- platform: mpd
+  host: !secret kitchen_audio_ip
+  port: 6600
+  name: Kitchen Audio MPD

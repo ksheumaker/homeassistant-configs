@@ -1,10 +1,10 @@
 bedtime:
   alias: Go to bed
   sequence:
-    - service: tts.google_say
-      entity_id: media_player.kitchen
+    - service: tts.voicerss_say
+      entity_id: media_player.kitchen_audio_mpd
       data:
-         message: Goodnight Kyle
+         message: Goodnight Kyle, Sweet Dreams
     - service: lock.lock
       entity_id: group.all_locks
     - service: remote.turn_off

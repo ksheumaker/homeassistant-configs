@@ -23,9 +23,13 @@ frontend:
 config:
 
 http:
+  base_url: !secret http_url
   api_password: !secret http_password
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
+  trusted_networks:
+    - 192.168.1.0/24
+    - 75.98.126.193
 
 # Checks for available updates
 updater:
@@ -66,6 +70,19 @@ remote: !include_dir_merge_list remotes/
 tts:
   - platform: google
 
+  - platform: amazon_polly
+    aws_access_key_id: !secret amazon_key_id
+    aws_secret_access_key: !secret amazon_secret
+    region_name: 'us-east-2'
+    output_format: mp3
+    sample_rate: 16000
+
+  - platform: voicerss
+    api_key: !secret voice_rss_api
+    language: en-us
+    codec: mp3
+    format: 44khz_16bit_stereo
+
 alexa:
 
 juicenet:
@@ -85,10 +102,6 @@ zwave:
 lutron_caseta:
   host: !secret lutron_ip
 
-light:
-  - platform: osramlightify
-    host: !secret lightify_ip
-    allow_lightify_groups: False
 
 alarm_control_panel:
   platform: manual
@@ -99,7 +112,17 @@ emulated_hue:
 mqtt:
   broker: !secret mqtt_ip
 
+# usps:
+#  username: !secret usps_user
+#  password: !secret usps_password
+#
+# camera:
+#  - platform: usps
+#    scan_interval: 5
+ 
 ios:
+
+light: !include_dir_merge_list lights/
 
 panel_custom: !include_dir_merge_list panels/
 
@@ -109,6 +132,7 @@ binary_sensor: !include_dir_merge_list binary_sensors/
 input_boolean: !include_dir_merge_named inputs/boolean/
 input_slider: !include_dir_merge_named inputs/slider/
 
+media_player: !include_dir_merge_list media_players/
 group: !include_dir_merge_named groups/
 automation: !include_dir_merge_list automations/
 scene: !include_dir_merge_list scenes/

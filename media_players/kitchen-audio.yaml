@@ -1,0 +1,4 @@
+- platform: volumio
+  host: !secret kitchen_audio_ip
+  port: 3000
+  name: Kitchen Audio

@@ -40,7 +40,7 @@
     - service: notify.ios_kyles_gigantic_iphone_7
       data:
         message: Basement Door Left Open
-    - service: tts.google_say
-      entity_id: media_player.kitchen
+    - service: tts.voicerss_say
+      entity_id: media_player.kitchen_audio_mpd
       data:
         message: Basement door left open, cats will escape

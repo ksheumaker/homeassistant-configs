@@ -1,0 +1,23 @@
+# ---------------------------------
+# Bedtime
+# ---------------------------------
+- alias: Bedtime action
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bedtime
+      to: 'on'
+  action:
+    - service: script.turn_on
+      entity_id: script.bedtime
+
+- alias: Bedtime reset
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bedtime
+      from: 'off'
+      to: 'on'
+      for: 
+        minutes: 5
+  action:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.bedtime

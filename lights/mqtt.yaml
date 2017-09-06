@@ -1,0 +1,19 @@
+- platform: mqtt
+  name: 'Kitchen Lamp Bulb'
+  state_topic: '/espurna/bulb/kitchen-led/relay/0'
+  command_topic: '/espurna/bulb/kitchen-led/relay/0/set'
+  payload_on: 1
+  payload_off: 0
+  rgb_state_topic: '/espurna/bulb/kitchen-led/color'
+  rgb_command_topic: '/espurna/bulb/kitchen-led/color/set'
+  rgb: true
+  optimistic: false
+  color_temp: true
+  color_temp_command_topic: '/espurna/bulb/kitchen-led/mired/set'
+  brightness: true
+  brightness_scale: 255
+  brightness_command_topic:  '/espurna/bulb/kitchen-led/brightness/set'
+  brightness_state_topic: '/espurna/bulb/kitchen-led/brightness'
+  white_value: true
+  white_value_command_topic: '/espurna/bulb/kitchen-led/channel/3/set'
+  white_value_state_topic: '/espurna/bulb/kitchen-led/channel/3'

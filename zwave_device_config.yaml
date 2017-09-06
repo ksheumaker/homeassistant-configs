@@ -7,3 +7,6 @@ zwave.aeotec_zw090_zstick_gen5_us:
 light.level:
   ignored: false
   polling_intensity: 0
+zwave.basement_door:
+  ignored: false
+  polling_intensity: 0

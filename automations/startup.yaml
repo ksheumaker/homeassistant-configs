@@ -9,7 +9,7 @@
     - service: notify.ios_kyles_gigantic_iphone_7
       data:
         message: Home Assistant Started
-    - service: tts.google_say
-      entity_id: media_player.kitchen
+    - service: tts.voicerss_say
+      entity_id: media_player.kitchen_audio_mpd
       data:
         message: Home Assistant Started

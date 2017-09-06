@@ -1,0 +1,4 @@
+- platform: osramlightify
+  host: !secret lightify_ip
+  allow_lightify_groups: False
+  
