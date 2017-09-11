@@ -1,0 +1,22 @@
+# -----------------------------------------
+#  Outside
+# -----------------------------------------
+outside:
+  view: yes
+  name: Outside
+  entities:
+    - group.outside_lights
+    - group.led_strip_1
+
+outside_lights:
+  name: Lighting
+  entities:
+    - light.porch
+    - light.deck
+    - light.deck_accent
+
+led_strip_1:
+  name: LED Strip 1
+  entities:
+    - light.led_strip_1
+    - input_slider.led_strip_1_speed

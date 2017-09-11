@@ -1,0 +1,10 @@
+SetLightColor:
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: light.{{ Light | replace(" ", "_") }}
+      color_name: '{{ Color | replace(" ", "_") }}'
+  speech:
+    type: plain
+    text: >
+       Light Set to '{{ Color | replace(" ", "_") }}'

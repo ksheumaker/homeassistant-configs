@@ -18,7 +18,6 @@ kitchen_lights:
     - light.pantry
     - light.dining_room
     - light.kitchen_lamp
-    - light.kitchen_lamp_bulb
 kitchen_sensors:
   name: Sensors
   entities:

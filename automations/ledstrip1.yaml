@@ -1,0 +1,11 @@
+- alias: "LED Strip 1 Animation Speed"
+  initial_state: True
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: input_slider.led_strip_1_speed
+  action:
+    - service: mqtt.publish
+      data_template:
+        topic: "ledstrip/strip1/set"
+        payload: '{"transition":{{ trigger.to_state.state | int }}}'
