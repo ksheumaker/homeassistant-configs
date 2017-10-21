@@ -15,6 +15,7 @@ misc:
     - input_boolean.basement_door_alarm
     - script.bedtime
     - group.zones
+    - sensor.test_pico
 
 alarm:
   name: Alarm Clock

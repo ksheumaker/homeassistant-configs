@@ -1,0 +1,19 @@
+leave:
+  alias: Leaving the house
+  sequence:
+    - service: tts.voicerss_say
+      entity_id: media_player.kitchen_audio_mpd
+      data:
+         message: Goodbye, Turning off lights and locking doors.
+    - service: light.turn_off
+      entity_id: group.interior_lights
+    - service: lock.lock
+      entity_id: group.all_locks
+    - service: remote.turn_off
+      entity_id: remote.living_room
+    - service: remote.turn_off
+      entity_id: remote.kitchen
+    - service: fan.turn_off
+      entity_id: fan.living_room_fan_level
+    - service: fan.turn_off
+      entity_id: fan.bedroom_fan_level

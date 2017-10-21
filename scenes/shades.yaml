@@ -1,26 +1,30 @@
 - name: Shades - Cat
   entities:
-    cover.bedroom_closet: 
-      position: 0
-    cover.bedroom_left: 
-      position: 0
-    cover.bedroom_right: 
-      position: 20
+    light.shade_closet: 
+      state: off
+    light.shade_left: 
+      state: off
+    light.shade_right: 
+      state: on
+      brightness: 51
 
 - name: Shades - Open
   entities:
-    cover.bedroom_closet: 
-      position: 100
-    cover.bedroom_left: 
-      position: 100
-    cover.bedroom_right: 
-      position: 100
+    light.shade_closet: 
+      state: on
+      brightness: 255
+    light.shade_left: 
+      state: on
+      brightness: 255
+    light.shade_right: 
+      state: on
+      brightness: 255
 
 - name: Shades - Closed
   entities:
-    cover.bedroom_closet: 
-      position: 0
-    cover.bedroom_left: 
-      position: 0
-    cover.bedroom_right: 
-      position: 100
+    light.shade_closet: 
+      state: off
+    light.shade_left: 
+      state: off
+    light.shade_right: 
+      state: off

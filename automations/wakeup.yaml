@@ -14,10 +14,10 @@
        - thu
        - fri
   action:
-    service: cover.set_cover_position
+    service: light.turn_on
     data:
-      position: 50
+      brightness: 127
       entity_id: 
-        - cover.bedroom_left
-        - cover.bedroom_right
-        - cover.bedroom_closet
+        - light.shade_left
+        - light.shade_right
+        - light.shade_closet

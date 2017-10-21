@@ -13,6 +13,8 @@ bedroom_lights:
   name: Lighting
   entities:
     - light.bedroom_light
+    - switch.bedroom_table_1
+    - switch.bedroom_table_2
     - light.bathroom
     - light.toliet
 bedroom_shades:
@@ -21,9 +23,9 @@ bedroom_shades:
     - scene.shades__open
     - scene.shades__closed
     - scene.shades__cat
-    - cover.bedroom_right
-    - cover.bedroom_left
-    - cover.bedroom_closet
+    - light.shade_right
+    - light.shade_left
+    - light.shade_closet
 bedroom_sensors:
   name: Sensors
   entities:

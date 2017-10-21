@@ -10,11 +10,7 @@ homeassistant:
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Chicago
-
-  # customize:    
-  #binary_sensor.floorplan:
-  #    custom_ui_state_card: floorplan
-  #    config: !include floorplans/kylehouse.yaml
+  customize: !include customize.yaml
 
 # Enables the frontend
 frontend:
@@ -99,21 +95,52 @@ zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_key
 
-lutron_caseta:
-  host: !secret lutron_ip
-
-cover:
-  - platform: lutron_caseta
+caseta:
+  bridges:
+     - host: !secret lutron_pro_ip
+       devices:
+         - id: 2
+           type: remote
+         - id: 7
+           type: remote
+         - id: 8
+           type: remote
+         - id: 9
+           type: remote
+         - id: 10
+           type: remote
+         - id: 16
+           type: remote
+         - id: 22
+           type: remote
+         - id: 23
+           type: remote
+         - id: 24
+           type: remote
+         - id: 18
+           type: switch
+         - id: 17
+           type: switch
 
 
 alarm_control_panel:
   platform: manual
   name: “Alarm”
+  code: 1234
+  
+octoprint:
+  host: !secret octoprint_ip
+  api_key: !secret octoprint_api
+  bed: true
+  number_of_tools: 1
 
 emulated_hue:
 
 mqtt:
   broker: !secret mqtt_ip
+  discovery: true
+  discovery_prefix: homeassistant
+
 
 # usps:
 #  username: !secret usps_user
@@ -125,6 +152,7 @@ mqtt:
  
 ios:
 
+switch: !include_dir_merge_list switches/
 light: !include_dir_merge_list lights/
 
 panel_custom: !include_dir_merge_list panels/
@@ -133,7 +161,8 @@ sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
 
 input_boolean: !include_dir_merge_named inputs/boolean/
-input_slider: !include_dir_merge_named inputs/slider/
+input_number: !include_dir_merge_named inputs/slider/
+input_text: !include_dir_merge_named inputs/text/
 
 media_player: !include_dir_merge_list media_players/
 group: !include_dir_merge_named groups/
@@ -141,6 +170,7 @@ automation: !include_dir_merge_list automations/
 scene: !include_dir_merge_list scenes/
 script: !include_dir_merge_named scripts/
 intent_script: !include_dir_merge_named intents/
+camera: !include_dir_merge_list cameras/
 
 device_tracker: !include_dir_merge_list trackers/
 

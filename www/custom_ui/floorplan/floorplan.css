@@ -147,7 +147,7 @@ svg, svg * {
 .fan-on {
   transform-origin: center;
   fill: #3CB3FF !important;
-  -webkit-animation: rotation 4s infinite linear;
+  /* -webkit-animation: rotation 4s infinite linear; */
 }
 
 .fan-off {
@@ -161,13 +161,13 @@ svg, svg * {
 .hvac-cool {
   transform-origin: center;
   fill: #3CB3FF !important;
-  -webkit-animation: rotation 4s infinite linear;
+  /* -webkit-animation: rotation 4s infinite linear; */
 }
 
 .hvac-heat {
   transform-origin: center;
   fill: #FF0000 !important;
-  -webkit-animation: rotation 4s infinite linear;
+  /* -webkit-animation: rotation 4s infinite linear; */
 }
 
 .hvac-idle {
@@ -286,3 +286,4 @@ svg, svg * {
 .squeezebox-on {
   fill: #2baaa6 !important;
 }
+

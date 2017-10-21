@@ -48,13 +48,13 @@
 
         - name: Shades
           entities:
-            - cover.bedroom_left
-            - cover.bedroom_right
-            - cover.bedroom_closet
+            - light.shade_left
+            - light.shade_right
+            - light.shade_closet
           states:
-            - state: 'open'
+            - state: 'on'
               class: 'shades-open'
-            - state: 'closed'
+            - state: 'off'
               class: 'shades-closed'
 
         - name: Motion
@@ -136,6 +136,8 @@
              - light.tv_lights
              - switch.bookcase_right_switch
              - switch.bookcase_left_switch
+             - switch.bedroom_table_1
+             - switch.bedroom_table_2
              - light.living_room_fan_light
              - light.pantry
              - light.porch

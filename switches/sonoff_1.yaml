@@ -1,0 +1,9 @@
+- platform: mqtt
+  name: "Bedroom Table 1"
+  state_topic: "/espurna/switch/sonoff_1/relay/0"
+  command_topic: "/espurna/switch/sonoff_1/relay/0/set"
+  payload_on: 1
+  payload_off: 0
+  optimistic: false
+  qos: 0
+  retain: true

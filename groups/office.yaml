@@ -6,8 +6,21 @@ office:
   name: Office
   entities:
     - group.office_sensors
+    - group.3d_printer
 office_sensors:
   name: Sensors
   entities:
     - sensor.office_temperature
     - binary_sensor.office_occupancy
+    - camera.octoprint
+3d_printer:
+  name: 3D Printer
+  entities:
+    - sensor.octoprint_current_state
+    - binary_sensor.octoprint_printing
+    - binary_sensor.octoprint_printing_error
+    - sensor.octoprint_job_percentage
+    - sensor.octoprint_target_bed_temp
+    - sensor.octoprint_actual_bed_temp
+    - sensor.octoprint_target_tool0_temp
+    - sensor.octoprint_actual_tool0_temp

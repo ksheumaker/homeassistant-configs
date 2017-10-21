@@ -1,0 +1,147 @@
+- alias: HASwitchPlate_Lights_Init
+  trigger:
+  - platform: mqtt
+    topic: 'homeassistant/binary_sensor/HASwitchPlate/state'
+    payload: 'ON'
+  - platform: homeassistant
+    event: start
+  action:
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[4].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[4].txt'
+      payload: '"Lamp"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[5].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[5].txt'
+      payload: '"Dining"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[6].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[6].txt'
+      payload: '"Cabinet"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[7].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[7].txt'
+      payload: '"Kitchen"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[8].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[8].txt'
+      payload: '"Deck"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[9].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[9].txt'
+      payload: '"DeckAcc"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[10].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[10].txt'
+      payload: '"Stairs"'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[11].font'
+      payload: '1'
+  - service: mqtt.publish
+    data:
+      topic: 'homeassistant/haswitchplate/HASwitchPlate/command/p[6].b[11].txt'
+      payload: '"Hall"'
+
+
+- alias: HASwitchPlate_LightButton4
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[4]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.kitchen_lamp
+    
+- alias: HASwitchPlate_LightButton5
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[5]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.dining_room
+
+- alias: HASwitchPlate_LightButton6
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[6]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: 
+      - light.cabinets_left
+      - light.cabinets_right
+
+- alias: HASwitchPlate_LightButton7
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[7]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.kitchen_lights
+
+- alias: HASwitchPlate_LightButton8
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[8]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.deck
+
+- alias: HASwitchPlate_LightButton9
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[9]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.deck_accent
+
+- alias: HASwitchPlate_LightButton10
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[10]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.stairs
+
+- alias: HASwitchPlate_LightButton11
+  trigger:
+    platform: mqtt
+    topic: 'homeassistant/haswitchplate/HASwitchPlate/state/p[6].b[11]'
+    payload: 'ON'
+  action:
+    service: light.toggle
+    entity_id: light.hall

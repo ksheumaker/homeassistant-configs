@@ -24,6 +24,8 @@ interior_lights:
     - switch.bookcase_right_switch
     - switch.garage_florecent
     - switch.garage_stair
+    - switch.bedroom_table_1
+    - switch.bedroom_table_2
 
 exterior_lights:
   name: Exterior Lights

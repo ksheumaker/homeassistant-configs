@@ -1,0 +1,13 @@
+haswitchplate_pagebutton1_label:
+  name: HASP Page Button 1 Label
+  icon: mdi:book-open-page-variant
+  initial: Scene
+haswitchplate_pagebutton2_label:
+  name: HASP Page Button 2 Label
+  icon: mdi:book-open-page-variant
+  initial: Home
+haswitchplate_pagebutton3_label:
+  name: HASP Page Button 3 Label
+  icon: mdi:book-open-page-variant
+  initial: Lights
+
