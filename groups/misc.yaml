@@ -41,5 +41,6 @@ misc_zwave:
     - zwave.motion_1
     - zwave.stair_motion
     - zwave.stair_motion_top
+    - zwave.shop_vac
     - zwave.usb_controller
 

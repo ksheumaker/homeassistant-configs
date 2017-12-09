@@ -37,7 +37,7 @@
     entity_id: input_boolean.basement_door_alarm
     state: 'on'
   action:
-    - service: notify.ios_kyles_gigantic_iphone_7
+    - service: !secret alert_kyle
       data:
         message: Basement Door Left Open
     - service: tts.voicerss_say

@@ -25,3 +25,4 @@ old
 homebridge
 emulated_hue_ids.json
 usps_cookies.pickle
+custom_components/*

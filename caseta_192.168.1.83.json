@@ -613,6 +613,30 @@
             "Number" : 6
           }
         ]
+      },
+      {
+        "ID" : 25,
+        "Area" : {
+          "Name" : "Laundry Room"
+        },
+        "Name" : "Laundry Pico",
+        "Buttons" : [
+          {
+            "Number" : 2
+          },
+          {
+            "Number" : 3
+          },
+          {
+            "Number" : 4
+          },
+          {
+            "Number" : 5
+          },
+          {
+            "Number" : 6
+          }
+        ]
       }
     ],
     "Zones" : [

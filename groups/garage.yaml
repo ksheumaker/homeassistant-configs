@@ -8,6 +8,8 @@ garage:
     - group.garage_lights
     - group.garage_sensors
     - group.evse_sensors
+    - group.shop_vac
+    - group.garage_camera
 garage_lights:
   name: Lighting
   entities:
@@ -20,6 +22,21 @@ garage_sensors:
     - binary_sensor.garage_door_sensor
     - sensor.garage_motion_state
     - sensor.garage_motion_temperature
+garage_camera:
+  name: Garage Camera
+  entities:
+    - camera.garage
+    - sensor.blink_garage_temperature
+    - sensor.blink_garage_battery
+    - binary_sensor.blink_armed_status
+    - binary_sensor.blink_garage_motion_enabled
+shop_vac:
+  name: Shop VAC
+  entities:
+    - switch.shop_vac_switch
+    - sensor.shop_vac_power
+    - sensor.shop_vac_voltage
+    - sensor.shop_vac_current
 evse_sensors:
   name: EVSE
   entities:

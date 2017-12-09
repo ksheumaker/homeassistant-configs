@@ -91,6 +91,10 @@ ring:
   username: !secret ring_user
   password: !secret ring_password
 
+blink:
+  username: !secret blink_user
+  password: !secret blink_password
+
 zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_key
@@ -116,6 +120,8 @@ caseta:
          - id: 23
            type: remote
          - id: 24
+           type: remote
+         - id: 25
            type: remote
          - id: 18
            type: switch

@@ -9,7 +9,7 @@
     condition: template
     value_template: '{{ states.sensor.garage_charging_status.state == "standby" }}'
   action:
-    service: notify.ios_kyles_gigantic_iphone_7
+    service: !secret alert_kyle
     data:
       message: >
         Car not plugged in to charger
