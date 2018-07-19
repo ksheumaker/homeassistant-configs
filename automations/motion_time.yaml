@@ -1,0 +1,30 @@
+# ---------------------------------
+#  Light level control
+# ---------------------------------
+- alias: Turn down motion lights at night
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    service: input_number.set_value
+    data:
+      value: 50
+      entity_id: 
+        - input_number.motion_stair_level
+        - input_number.motion_bathroom_level
+        - input_number.motion_closet_level
+
+- alias: Turn up motion lights in the morning
+  initial_state: 'on'
+  trigger:
+    platform: time
+    at: '09:00:00'
+  action:
+    service: input_number.set_value
+    data:
+      value: 255
+      entity_id: 
+        - input_number.motion_stair_level
+        - input_number.motion_bathroom_level
+        - input_number.motion_closet_level

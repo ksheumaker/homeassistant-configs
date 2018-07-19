@@ -2,6 +2,7 @@
 #  Kitchen Cabinets Lights
 # ---------------------------------
 - alias: Turn cabinets on with kitchen
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: light.kitchen_lights
@@ -15,6 +16,7 @@
         - light.cabinets_left
         - light.cabinets_right
 - alias: Turn cabinets off with kitchen
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: light.kitchen_lights

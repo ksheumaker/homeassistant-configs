@@ -8,28 +8,47 @@ bedroom:
     - group.bedroom_lights
     - group.bedroom_climate
     - group.bedroom_shades
+    - group.bedroom_bed
     - group.bedroom_sensors
+
+bedroom_bed:
+  name: Bed
+  entities:
+    - sensor.time_in_bed
+    - sensor.bed_state
+    - sensor.bed_left_state
+    - sensor.bed_right_state
+    - sensor.bed_left_value
+    - sensor.bed_right_value
+
 bedroom_lights:
   name: Lighting
   entities:
-    - light.bedroom_light
+    - light.master_bedroom_light
     - switch.bedroom_table_1
     - switch.bedroom_table_2
-    - light.bathroom
-    - light.toliet
+    - light.master_bathroom_light
+    - light.master_bathroom_toliet
+    - light.master_closet_light
 bedroom_shades:
   name: Shades
   entities:
     - scene.shades__open
     - scene.shades__closed
     - scene.shades__cat
-    - light.shade_right
-    - light.shade_left
-    - light.shade_closet
+    - cover.master_closet_shade
+    - cover.master_bedroom_shade_left
+    - cover.master_bedroom_shade_right
 bedroom_sensors:
   name: Sensors
   entities:
     - binary_sensor.master_bedroom_occupancy
+    - binary_sensor.bathroom_motion_sensor
+    - input_boolean.motion_bathroom_enable
+    - input_number.motion_bathroom_level
+    - binary_sensor.closet_motion_sensor
+    - input_boolean.motion_closet_enable
+    - input_number.motion_closet_level
 bedroom_climate:
   name: Climate
   entities:

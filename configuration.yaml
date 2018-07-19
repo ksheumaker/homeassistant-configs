@@ -14,6 +14,7 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  javascript_version: latest
 
 # Enables configuration UI
 config:
@@ -21,8 +22,10 @@ config:
 http:
   base_url: !secret http_url
   api_password: !secret http_password
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  ssl_certificate: /config/fullchain.pem
+  ssl_key: /config/privkey.pem
+  cors_allowed_origins:
+    - http://home.sheumaker.com:7080
   trusted_networks:
     - 192.168.1.0/24
     - 75.98.126.193
@@ -30,11 +33,22 @@ http:
 # Checks for available updates
 updater:
 
+influxdb:
+  host: 192.168.1.15
+  port: 8086
+  database: home_assistant
+
 # Discover some devices automatically
 discovery:
   ignore:
     - wink
 
+recorder:
+  db_url: !secret mariadb_url
+  purge_keep_days: 30
+  exclude:
+     domains:
+       - automation
 
 # Enables support for tracking state changes over time
 history:
@@ -42,6 +56,8 @@ history:
     entities:
       - sensor.current_time
       - sensor.current_date
+      - sensor.bed_left_value
+      - sensor.bed_right_value
     domains:
       - zwave
       - sun
@@ -52,6 +68,8 @@ logbook:
     entities:
       - sensor.current_time
       - sensor.current_date
+      - sensor.bed_left_value
+      - sensor.bed_right_value
     domains:
       - zwave
       - sun
@@ -81,6 +99,16 @@ tts:
 
 alexa:
 
+cloud:
+  alexa:
+     filter:
+        exclude_domains:
+          - group
+          - automation
+          - sensor
+          - media_player
+
+
 juicenet:
   access_token: !secret juicenet_key
 
@@ -91,43 +119,20 @@ ring:
   username: !secret ring_user
   password: !secret ring_password
 
-blink:
-  username: !secret blink_user
-  password: !secret blink_password
+#blink:
+#  username: !secret blink_user
+#  password: !secret blink_password
 
 zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_key
 
-caseta:
+lutron_caseta_pro:
   bridges:
      - host: !secret lutron_pro_ip
-       devices:
-         - id: 2
-           type: remote
-         - id: 7
-           type: remote
-         - id: 8
-           type: remote
-         - id: 9
-           type: remote
-         - id: 10
-           type: remote
-         - id: 16
-           type: remote
-         - id: 22
-           type: remote
-         - id: 23
-           type: remote
-         - id: 24
-           type: remote
-         - id: 25
-           type: remote
-         - id: 18
-           type: switch
-         - id: 17
-           type: switch
-
+       mac: !secret lutron_pro_mac 
+       cover: [ 19, 20, 21 ]
+       switch: [ 17, 18 ]
 
 alarm_control_panel:
   platform: manual
@@ -141,12 +146,21 @@ octoprint:
   number_of_tools: 1
 
 emulated_hue:
+  exposed_domains:
+    - light
+    - switch
+    - fan
 
 mqtt:
   broker: !secret mqtt_ip
   discovery: true
   discovery_prefix: homeassistant
 
+bmw_connected_drive:
+ bmw_i3:
+   username: !secret bmw_user
+   password: !secret bmw_password
+   region: "north_america"
 
 # usps:
 #  username: !secret usps_user
@@ -179,4 +193,16 @@ intent_script: !include_dir_merge_named intents/
 camera: !include_dir_merge_list cameras/
 
 device_tracker: !include_dir_merge_list trackers/
+
+notify:
+  - name: amazon_notifyme
+    platform: rest
+    message_param_name: notification
+    resource: https://api.notifymyecho.com/v1/NotifyMe
+    data:
+      accessCode: !secret notifyme_code
+
+aerogarden:
+  username: !secret aerogarden_user
+  password: !secret aerogarden_password
 

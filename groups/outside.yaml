@@ -14,7 +14,7 @@ outside:
 outside_lights:
   name: Lighting
   entities:
-    - light.porch
+    - light.exterior_porch
     - light.deck
     - light.deck_accent
 

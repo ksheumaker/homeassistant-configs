@@ -1,0 +1,13 @@
+- platform: nut
+  name: Basement UPS
+  host: 192.168.1.15
+  port: 3493
+  alias: ups
+  username: nutuser
+  password: secret
+  resources:
+    - ups.load
+    - input.voltage
+    - battery.runtime
+    - battery.charge
+    - ups.status.display

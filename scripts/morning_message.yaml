@@ -1,0 +1,28 @@
+greeting:
+  alias: Greeting
+  sequence:
+    - service: tts.voicerss_say
+      data_template:
+        entity_id: media_player.kitchen_audio_mpd
+        message: >
+           Good Morning Kyle,
+  
+           {% set daytypes = [ "trash_day", "recycle_day", "cleaning_day", "pay_day" ] %}
+      
+           {% for d in daytypes %}
+              {% set count = 0 %}
+              {% if is_state("binary_sensor.%s" % d, "on") %}
+                  {% if loop.index == 1 %} Today is: {% endif %}
+                  {% if loop.index > 1 %} and {% endif %}
+                  {{ d.replace("_", " ") }}
+              {% endif %}
+           {% endfor %}
+           
+           It is currently {{ states.sensor.dark_sky_summary.state }} with a temperature of {{  states.sensor.dark_sky_temperature.state|int }} and feels like {{ states.sensor.dark_sky_apparent_temperature.state|int }} degrees.
+           
+           Today will be {{ states.sensor.dark_sky_hourly_summary.state }}
+           
+           The forecast high is {{ states.sensor.dark_sky_daily_high_temperature.state|int }} with a low of {{	
+           states.sensor.dark_sky_daily_low_temperature.state|int  }} degrees.
+           
+           It will take you {{ states.sensor.time_to_work.state }} minutes to get to work via {{ states.sensor.time_to_work.attributes.route }}

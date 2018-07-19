@@ -4,7 +4,7 @@ bedtime:
     - service: tts.voicerss_say
       entity_id: media_player.kitchen_audio_mpd
       data:
-         message: Goodnight Kyle, Sweet Dreams
+         message: Goodnight
     - service: lock.lock
       entity_id: group.all_locks
     - service: remote.turn_off
@@ -13,15 +13,21 @@ bedtime:
       entity_id: remote.kitchen
     - service: light.turn_off
       entity_id: group.interior_lights
+    - service: switch.turn_off
+      entity_id: group.interior_switches
     - service: fan.turn_off
       entity_id: fan.living_room_fan_level
+    - service: climate.set_hold_mode
+      entity_id: climate.hearth_room
+      data:
+        hold_mode: "sleep"
     - service: fan.turn_on
       data:
         entity_id: fan.bedroom_fan_level
         speed: low
     - service: light.turn_on
       data:
-        entity_id: light.bedroom_light
+        entity_id: light.master_bedroom_light
         brightness: 25
     - service: light.turn_on
       data:

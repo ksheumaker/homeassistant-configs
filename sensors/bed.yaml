@@ -1,0 +1,10 @@
+- platform: mqtt
+  friendly_name: "Bed Raw - Left"
+  state_topic: 'sensor/bed/left'
+  name: 'bed_left_value'
+
+- platform: mqtt
+  friendly_name: "Bed Raw - Right"
+  state_topic: 'sensor/bed/right'
+  name: 'bed_right_value'
+

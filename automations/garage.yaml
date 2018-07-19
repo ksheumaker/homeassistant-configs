@@ -3,6 +3,7 @@
 # ---------------------------------
 
 - alias: Notification - Garage Door Opened
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.garage_door_sensor
@@ -15,6 +16,7 @@
         Garage Door Opened
 
 - alias: Notification - Garage Door Closed
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.garage_door_sensor
@@ -27,6 +29,7 @@
         Garage Door Closed
 
 - alias: Garage Light On with garage door open
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.garage_door_sensor
@@ -36,9 +39,10 @@
     service: switch.turn_on
     entity_id: 
       - switch.garage_florecent
-      - switch.garage_stairs
+      - switch.garage_stair_lights
 
 - alias: Garage Light Off with garage door closed
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: sensor.basement_door_state
@@ -50,4 +54,4 @@
     service: switch.turn_off
     entity_id: 
       - switch.garage_florecent
-      - switch.garage_stairs
+      - switch.garage_stair_lights

@@ -9,6 +9,7 @@ kitchen:
     - group.kitchen_climate
     - group.kitchen_sensors
     - group.kitchen_entertainment
+    - group.kitchen_aerogarden
 kitchen_lights:
   name: Lighting
   entities:
@@ -16,7 +17,7 @@ kitchen_lights:
     - light.cabinets_left
     - light.cabinets_right
     - light.pantry
-    - light.dining_room
+    - light.dining_room_light
     - light.kitchen_lamp
 kitchen_sensors:
   name: Sensors
@@ -35,7 +36,22 @@ kitchen_climate:
 kitchen_entertainment:
   name: Entertainment
   entities:
-    - media_player.kitchen_audio
+    - media_player.kitchen
     - media_player.kitchen_audio_mpd
     - sensor.kitchen_tv
     - remote.kitchen
+kitchen_aerogarden:
+  name: Aerogardens
+  entities:
+     - light.aerogarden_kitchen_1_light
+     - binary_sensor.aerogarden_kitchen_1_pump
+     - binary_sensor.aerogarden_kitchen_1_need_nutrients
+     - binary_sensor.aerogarden_kitchen_1_need_water
+     - sensor.aerogarden_kitchen_1_nutrient
+     - sensor.aerogarden_kitchen_1_planted
+     - light.aerogarden_kitchen_2_light
+     - binary_sensor.aerogarden_kitchen_2_pump
+     - binary_sensor.aerogarden_kitchen_2_need_nutrients
+     - binary_sensor.aerogarden_kitchen_2_need_water
+     - sensor.aerogarden_kitchen_2_nutrient
+     - sensor.aerogarden_kitchen_2_planted

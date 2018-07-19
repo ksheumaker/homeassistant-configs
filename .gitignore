@@ -26,3 +26,10 @@ homebridge
 emulated_hue_ids.json
 usps_cookies.pickle
 custom_components/*
+ecobee.conf
+@eaDir/
+*.pem
+lutron_caseta*
+haswitchplate-unused
+custom_components.org
+old

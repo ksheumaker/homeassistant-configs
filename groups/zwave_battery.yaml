@@ -1,0 +1,15 @@
+zwave_battery:
+  name: Battery Levels
+  entities:
+    - sensor.battery_zwave_front_door
+    - sensor.battery_zwave_front_door_sensor
+    - sensor.battery_zwave_pantry_door
+    - sensor.battery_zwave_sliding_door
+    - sensor.battery_zwave_basement_door
+    - sensor.battery_zwave_garage_door
+    - sensor.battery_zwave_motion_1
+    - sensor.battery_zwave_stair_motion
+    - sensor.battery_zwave_stair_motion_top
+    - sensor.battery_zwave_garage_motion
+    - sensor.battery_zwave_bathroom_motion
+    - sensor.battery_zwave_closet_motion

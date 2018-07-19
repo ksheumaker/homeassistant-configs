@@ -1,0 +1,14 @@
+motion_stair_enable:
+  name: Stair Motion Enable
+  initial: on
+  icon: mdi:eye
+
+motion_bathroom_enable:
+  name: Bathroom Motion Enable
+  initial: on
+  icon: mdi:eye
+
+motion_closet_enable:
+  name: Closet Motion Enable
+  initial: on
+  icon: mdi:eye

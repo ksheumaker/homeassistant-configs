@@ -1,0 +1,47 @@
+name: My House
+
+views:
+    - name: Living Room
+      theme: dark-mode
+      cards:
+          - type: glance
+            title: Glance Card
+            entities:
+                - binary_sensor.bathroom_motion_sensor
+                - binary_sensor.bathroom_motion_sensor
+                - binary_sensor.stair_motion_sensor
+                - binary_sensor.stair_motion_top_sensor
+                - binary_sensor.ring_front_door_motion
+          - type: entities
+            title: Example
+            entities:
+            - light.downstairs_hall
+
+
+          - type: picture-glance
+            image: https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=240&w=495
+            title: Living Room
+            entities: 
+                - lock.front_door_locked
+                - group.living_lights
+                - fan.living_room_fan_level
+                - sensor.living_room_temperature
+
+          - type: entity-filter
+            filter:
+            - domain: input_boolean
+            card_config:
+               title: Input booleans
+
+          - type: entity-filter
+            filter:
+            - domain: light
+            card_config:
+               title: Lights
+
+          - type: entity-filter
+            filter:
+            - domain: zwave
+            card_config:
+               title: Zwave Devices
+

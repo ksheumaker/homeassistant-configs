@@ -5,11 +5,20 @@ default_view:
   view: yes
   name: Living Room
   entities:
+    - group.day_status
     - group.living_door
     - group.living_lights
     - group.living_entertainment
     - group.living_climate
     - group.living_sensors
+day_status:
+  name: Status
+  entities:
+    - binary_sensor.trash_day
+    - binary_sensor.recycle_day
+    - binary_sensor.cleaning_day
+    - binary_sensor.pay_day
+    - sensor.time_to_work
 living_lights:
   name: Lighting
   entities:
@@ -19,8 +28,8 @@ living_lights:
     - switch.bookcase_right_switch
     - light.downstairs_hall
     - light.floor_lamp
-    - light.porch
-    - light.hall
+    - light.exteriror_porch
+    - light.downstairs_hall
     - scene.watch_tv
 living_door:
   name: Door
@@ -29,6 +38,7 @@ living_door:
     - lock.front_door_locked
     - sensor.front_door_state
     - sensor.front_lock_code
+    - sensor.front_lock_battery
     - sensor.front_lock_last_action2
     - binary_sensor.ring_front_door_motion
     - binary_sensor.ring_front_door_ding

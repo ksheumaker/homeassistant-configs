@@ -1,0 +1,32 @@
+# ---------------------------------
+#  Closet motion
+# ---------------------------------
+- alias: Turn on closet with motion 
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.closet_motion_sensor
+    to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.motion_closet_enable
+    state: 'on'
+  action:
+    service: light.turn_on
+    data_template:
+        entity_id: light.master_closet_light
+        brightness: '{{ states.input_number.motion_closet_level.state | int }}'
+
+- alias: Turn off closet with no motion (4min)
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.closet_motion_sensor
+    to: 'off'
+    for:
+      minutes: 4
+  action:
+    service: light.turn_off
+    entity_id: light.master_closet_light
+
+

@@ -2,6 +2,7 @@
 # Car not plugged in
 # ---------------------------------
 - alias: Car not plugged in at night
+  initial_state: 'on'
   trigger:
     platform: time
     at: '22:05:00'

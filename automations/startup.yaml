@@ -2,6 +2,7 @@
 # send me a notification
 # ---------------------------------
 - alias: Notification Text - Home Assistant Start
+  initial_state: 'on'
   trigger:
     - platform: homeassistant
       event: start

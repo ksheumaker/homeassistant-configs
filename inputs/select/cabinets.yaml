@@ -1,0 +1,9 @@
+cabinet_color:
+  name: Cabinet Color
+  options: 
+     - "White"
+     - "Red"
+     - "Green"
+     - "Blue"
+  icon: mdi:lightbulb
+

@@ -2,6 +2,7 @@
 # Lock changed
 # ---------------------------------
 - alias: Notification Text - Lock unlocked
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: lock.front_door_locked
@@ -14,6 +15,7 @@
         Front door {{ states.sensor.front_lock_last_action2.state }}
 
 - alias: Notification Text - Lock locked
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: lock.front_door_locked
@@ -24,3 +26,15 @@
     data:
       message: >
         Front door {{ states.sensor.front_lock_last_action2.state }}
+
+- alias: Notification Text - Battery Level
+  initial_state: 'on'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.front_lock_battery
+    below: 50
+  action:
+    service: !secret alert_kyle
+    data:
+      message: >
+        Front door batteries need replacing {{ sensor.front_lock_battery }}

@@ -1,0 +1,14 @@
+bed_right_state:
+    friendly_name: "Bed - Right Side"
+    value_template: "{% if states.sensor.bed_right_value.state|int > 200 %}Occupied{% else %}Unoccupied{% endif %}"
+    icon_template: "{% if states.sensor.bed_right_value.state|int > 200 %}mdi:hotel{% else %}mdi:bed-empty{% endif %}"
+
+bed_left_state:
+    friendly_name: "Bed - Left Side"
+    value_template: "{% if states.sensor.bed_left_value.state|int > 130 %}Occupied{% else %}Unoccupied{% endif %}"
+    icon_template: "{% if states.sensor.bed_left_value.state|int > 130 %}mdi:hotel{% else %}mdi:bed-empty{% endif %}"
+
+bed_state:
+    friendly_name: "Bed - Any"
+    value_template: "{% if states.sensor.bed_left_state.state == 'Occupied' or states.sensor.bed_right_state.state == 'Occupied' %}Occupied{% else %}Unoccupied{% endif %}"
+    icon_template: "{% if states.sensor.bed_left_state.state == 'Occupied' or states.sensor.bed_right_state.state == 'Occupied' %}mdi:hotel{% else %}mdi:bed-empty{% endif %}"

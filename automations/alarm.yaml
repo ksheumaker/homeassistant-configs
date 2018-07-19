@@ -2,6 +2,7 @@
 # Alarm
 # ---------------------------------
 - alias: 'Wake Me Up'
+  initial_state: 'on'
   trigger:
     platform: time
     minutes: '/5'

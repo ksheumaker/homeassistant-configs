@@ -2,6 +2,7 @@
 # Pico Remotes
 # ---------------------------------
 - alias: Test Pico - On
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.test_pico
@@ -13,6 +14,7 @@
         - light.cabinets_right
 
 - alias: Test Pico - Off
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.test_pico
@@ -24,6 +26,7 @@
         - light.cabinets_right
 
 - alias: Test Pico - Up
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.test_pico
@@ -33,6 +36,7 @@
       entity_id: light.cabinets_left
 
 - alias: Test Pico - Down
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.test_pico
@@ -43,6 +47,7 @@
 
 
 - alias: Test Pico - Middle
+  initial_state: 'on'
   trigger:
     - platform: state
       entity_id: sensor.test_pico
@@ -56,18 +61,20 @@
 # ---------------------------------
 
 - alias: Laundry Pico - On
+  initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: sensor.laundry_pico
+      entity_id: sensor.laundry_room_pico
       to: '1'
   action:
     - service: light.turn_on
       entity_id: light.laundry
 
 - alias: Laundry Pico - Off
+  initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: sensor.laundry_pico
+      entity_id: sensor.laundry_room_pico
       to: '4'
   action:
     - service: light.turn_off

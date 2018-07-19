@@ -1,0 +1,4 @@
+leave:
+  name: Leave
+  initial: off
+  icon: mdi:car

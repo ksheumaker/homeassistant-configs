@@ -2,10 +2,13 @@
   name: Living Room
   activity: Watch TV
   scan_interval: 15
+  host: 192.168.1.35
 
 - platform: harmony
   name: Kitchen
   activity: Watch TV
   scan_interval: 15
+  host: 192.168.1.18
+
 
 

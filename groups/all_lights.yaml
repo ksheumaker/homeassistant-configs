@@ -4,26 +4,33 @@
 interior_lights:
   name: Interior Lights
   entities:
-    - light.bathroom
-    - light.bedroom_light
+    - light.master_bathroom_light
+    - light.master_bedroom_light
     - light.cabinets_left
     - light.cabinets_right
     - light.dining_room
+    - light.dining_room_light
     - light.hall
+    - light.downstairs_hall
     - light.kitchen_lamp
     - light.kitchen_lights
     - light.laundry
     - light.living_room_fan_light
     - light.floor_lamp
     - light.pantry
-    - light.stair
-    - light.toliet
+    - light.stair_lights
+    - light.master_bathroom_toliet
     - light.tv_lights
-    - light.upstairs_hall
+    - light.upstairs_hallway_lights
+    - light.master_closet_light
+
+interior_switches:
+  name: Interior Switches
+  entities:
     - switch.bookcase_left_switch
     - switch.bookcase_right_switch
     - switch.garage_florecent
-    - switch.garage_stair
+    - switch.garage_stair_lights
     - switch.bedroom_table_1
     - switch.bedroom_table_2
 
@@ -32,5 +39,5 @@ exterior_lights:
   entities:
     - light.deck
     - light.deck_accent
-    - light.porch
+    - light.exterior_porch
 

@@ -1,0 +1,10 @@
+- platform: history_stats
+  name: Time in bed
+  entity_id: sensor.bed_state
+  state: 'Occupied'
+  type: time
+  # yesterday at noon
+  start: '{{ now().replace(day=now().day - 1).replace(hour=12).replace(minute=0).replace(second=0) }}'
+  # today at 12:59
+  end: '{{ now().replace(hour=11).replace(minute=59).replace(second=59) }}'
+  icon: mdi:hotel

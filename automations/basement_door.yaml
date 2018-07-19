@@ -2,6 +2,7 @@
 #  Basement Door / Garage Light
 # ---------------------------------
 - alias: Garage Light On with basement door sensor
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: sensor.basement_door_state
@@ -10,9 +11,10 @@
     service: switch.turn_on
     entity_id: 
       - switch.garage_florecent
-      - switch.garage_stairs
+      - switch.garage_stair_lights
 
 - alias: Garage Light Off with basement door sensor
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: sensor.basement_door_state
@@ -23,9 +25,10 @@
     service: switch.turn_off
     entity_id: 
       - switch.garage_florecent
-      - switch.garage_stairs
+      - switch.garage_stair_lights
 
 - alias: Basement door left open
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: sensor.basement_door_state

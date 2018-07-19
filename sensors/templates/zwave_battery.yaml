@@ -1,0 +1,72 @@
+battery_zwave_basement_door:
+  entity_id: zwave.basement_door
+  value_template: '{{ states.zwave.basement_door.attributes.battery_level }}'
+  friendly_name: Basement Door
+  unit_of_measurement: '%'
+
+battery_zwave_bathroom_motion:
+  entity_id: zwave.bathroom_motion
+  value_template: '{{ states.zwave.bathroom_motion.attributes.battery_level }}'
+  friendly_name: Bathroom Motion
+  unit_of_measurement: '%'
+
+battery_zwave_closet_motion:
+  entity_id: zwave.closet_motion
+  value_template: '{{ states.zwave.closet_motion.attributes.battery_level }}'
+  friendly_name: Closet Motion
+  unit_of_measurement: '%'
+
+battery_zwave_front_door:
+  entity_id: zwave.front_door
+  value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
+  friendly_name: Front Door Lock
+  unit_of_measurement: '%'
+
+battery_zwave_front_door_sensor:
+  entity_id: zwave.front_door_sensor
+  value_template: '{{ states.zwave.front_door_sensor.attributes.battery_level }}'
+  friendly_name: Front Door
+  unit_of_measurement: '%'
+
+battery_zwave_garage_door:
+  entity_id: zwave.garage_door
+  value_template: '{{ states.zwave.garage_door.attributes.battery_level }}'
+  friendly_name: Garage Door
+  unit_of_measurement: '%'
+
+battery_zwave_garage_motion:
+  entity_id: zwave.garage_motion
+  value_template: '{{ states.zwave.garage_motion.attributes.battery_level }}'
+  friendly_name: Garage Motion
+  unit_of_measurement: '%'
+
+battery_zwave_pantry_door:
+  entity_id: zwave.pantry_door
+  value_template: '{{ states.zwave.pantry_door.attributes.battery_level }}'
+  friendly_name: Pantry Door
+  unit_of_measurement: '%'
+
+battery_zwave_sliding_door:
+  entity_id: zwave.sliding_door
+  value_template: '{{ states.zwave.sliding_door.attributes.battery_level }}'
+  friendly_name: Sliding Door
+  unit_of_measurement: '%'
+
+battery_zwave_stair_motion:
+  entity_id: zwave.stair_motion
+  value_template: '{{ states.zwave.stair_motion.attributes.battery_level }}'
+  friendly_name: Stair Motion
+  unit_of_measurement: '%'
+
+battery_zwave_stair_motion_top:
+  entity_id: zwave.stair_motion_top
+  value_template: '{{ states.zwave.stair_motion_top.attributes.battery_level }}'
+  friendly_name: Stair Motion Top
+  unit_of_measurement: '%'
+
+battery_zwave_motion_1:
+  entity_id: zwave.motion_1
+  value_template: '{{ states.zwave.motion_1.attributes.battery_level }}'
+  friendly_name: Living Room Motion
+  unit_of_measurement: '%'
+

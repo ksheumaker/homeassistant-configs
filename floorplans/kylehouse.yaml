@@ -46,15 +46,26 @@
             - state: 'off'
               class: 'fan-off'
 
+        - name: Bed
+          entities:
+            - sensor.bed_left_state
+            - sensor.bed_right_state
+            - sensor.bed_state
+          states:
+            - state: 'Occupied'
+              class: 'motion-open'
+            - state: 'Unoccupied'
+              class: 'motion-closed'
+
         - name: Shades
           entities:
-            - light.shade_left
-            - light.shade_right
-            - light.shade_closet
+            - cover.master_bedroom_shade_left
+            - cover.master_bedroom_shade_right
+            - cover.master_closet_shade
           states:
-            - state: 'on'
+            - state: 'open'
               class: 'shades-open'
-            - state: 'off'
+            - state: 'closed'
               class: 'shades-closed'
 
         - name: Motion
@@ -92,6 +103,8 @@
             - binary_sensor.ring_front_door_motion
             - binary_sensor.stair_motion_sensor
             - binary_sensor.stair_motion_top_sensor
+            - binary_sensor.bathroom_motion_sensor
+            - binary_sensor.closet_motion_sensor
           states:
             - state: 'on'
               class: 'motion-open'
@@ -122,6 +135,10 @@
         - name: Buttons
           entities: 
              - input_boolean.bedtime
+             - input_boolean.leave
+             - input_boolean.motion_stair_enable
+             - input_boolean.motion_bathroom_enable
+             - input_boolean.motion_closet_enable
           states:
              - state: 'off'
                class: 'button-off'
@@ -140,10 +157,10 @@
              - switch.bedroom_table_2
              - light.living_room_fan_light
              - light.pantry
-             - light.porch
-             - light.hall
-             - light.stair
-             - switch.garage_stair
+             - light.exterior_porch
+             - light.downstairs_hall
+             - light.stairs_lights
+             - switch.garage_stair_lights
              - light.deck
              - light.dining_room
              - light.kitchen_lamp
@@ -152,10 +169,11 @@
              - light.kitchen_lights
              - switch.garage_florecent
              - light.laundry
-             - light.upstairs_hall
-             - light.toliet
-             - light.bathroom
-             - light.bedroom_light
+             - light.upstairs_hallway_lights
+             - light.master_bathroom_toliet
+             - light.master_bathroom_light
+             - light.master_bedroom_light
+             - light.master_closet_light
              - light.deck_accent
              - light.floor_lamp
           states:

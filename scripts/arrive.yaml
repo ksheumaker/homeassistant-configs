@@ -1,0 +1,15 @@
+arrive_night:
+  alias: Arrive - Night
+  sequence:
+    - service: tts.voicerss_say
+      entity_id: media_player.kitchen_audio_mpd
+      data:
+         message: Welcome Home
+    - service: light.turn_on
+      entity_id: light.downstairs_hall
+      data:
+          brightness: 100
+    - service: climate.set_away_mode
+      entity_id: climate.hearth_room
+      data:
+         away_mode: false

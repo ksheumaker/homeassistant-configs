@@ -1,0 +1,43 @@
+motion_stair_level:
+  name: Stair Motion Brightness
+  initial: 255
+  min: 1
+  max: 255
+  icon: mdi:lightbulb
+
+motion_stair_time:
+  name: Stair Motion Length
+  initial: 5
+  min: 1
+  max: 60
+  icon: mdi:clock
+
+motion_bathroom_level:
+  name: Bathroom Motion Brightness
+  initial: 255
+  min: 1
+  max: 255
+  icon: mdi:lightbulb
+
+motion_bathroom_time:
+  name: Bathroom Motion Length
+  initial: 15
+  min: 1
+  max: 60
+  icon: mdi:clock
+
+motion_closet_level:
+  name: Closet Motion Brightness
+  initial: 255
+  min: 1
+  max: 255
+  icon: mdi:lightbulb
+
+motion_closet_time:
+  name: Closet Motion Length
+  initial: 5
+  min: 1
+  max: 60
+  icon: mdi:clock
+
+

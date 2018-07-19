@@ -6,15 +6,32 @@ garage:
   name: Garage
   entities:
     - group.garage_lights
+    - group.garage_bmw
     - group.garage_sensors
     - group.evse_sensors
     - group.shop_vac
     - group.garage_camera
+
 garage_lights:
   name: Lighting
   entities:
-    - switch.garage_stair
+    - switch.garage_stair_lights
     - switch.garage_florecent
+
+garage_bmw:
+  name: BMW i3
+  entities:
+    - lock.i3_94__rex_lock
+    - sensor.i3_94__rex_charging_level_hv
+    - sensor.i3_94__rex_charging_status
+    - sensor.i3_94__rex_charging_time_remaining
+    - sensor.i3_94__rex_remaining_range_electric
+    - sensor.i3_94__rex_remaining_range_fuel
+    - sensor.i3_94__rex_remaining_range_total
+    - sensor.i3_94__rex_mileage
+    - sensor.i3_94__rex_remaining_fuel
+    - binary_sensor.i3_94__rex_check_control_messages
+
 garage_sensors:
   name: Sensors
   entities:
@@ -22,6 +39,7 @@ garage_sensors:
     - binary_sensor.garage_door_sensor
     - sensor.garage_motion_state
     - sensor.garage_motion_temperature
+
 garage_camera:
   name: Garage Camera
   entities:
@@ -30,6 +48,7 @@ garage_camera:
     - sensor.blink_garage_battery
     - binary_sensor.blink_armed_status
     - binary_sensor.blink_garage_motion_enabled
+
 shop_vac:
   name: Shop VAC
   entities:
@@ -37,6 +56,7 @@ shop_vac:
     - sensor.shop_vac_power
     - sensor.shop_vac_voltage
     - sensor.shop_vac_current
+
 evse_sensors:
   name: EVSE
   entities:

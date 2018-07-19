@@ -5,9 +5,12 @@ misc:
   name: Misc
   view: yes
   entities:
+    - group.synology
+    - group.ups
     - group.alarm
     - group.people
     - group.weather
+    - group.zwave_battery
     - group.misc_zwave
     - group.interior_lights
     - group.exterior_lights
@@ -16,6 +19,41 @@ misc:
     - script.bedtime
     - group.zones
     - sensor.test_pico
+    - group.motion_controls
+
+
+synology:
+  name: Synology
+  entities:
+    - sensor.cpu_load_total
+    - sensor.memory_usage_real
+    - sensor.network_up
+    - sensor.network_down
+    - sensor.volume_used_volume_1
+    - sensor.status_sda
+    - sensor.status_sdb
+
+ups:
+  name: UPS
+  entities:
+    - sensor.basement_ups_status
+    - sensor.basement_ups_load
+    - sensor.basement_ups_battery_runtime
+    - sensor.basement_ups_battery_charge
+    - sensor.basement_ups_input_voltage
+ 
+motion_controls:
+  name: Motion Controls
+  entities:
+    - input_boolean.motion_stair_enable
+    - input_number.motion_stair_level
+    - input_number.motion_stair_time
+    - input_boolean.motion_bathroom_enable
+    - input_number.motion_bathroom_level
+    - input_number.motion_bathroom_time
+    - input_boolean.motion_closet_enable
+    - input_number.motion_closet_level
+    - input_number.motion_closet_time
 
 alarm:
   name: Alarm Clock
@@ -41,6 +79,21 @@ misc_zwave:
     - zwave.motion_1
     - zwave.stair_motion
     - zwave.stair_motion_top
+    - zwave.bathroom_motion
+    - zwave.closet_motion
     - zwave.shop_vac
     - zwave.usb_controller
+
+battery_level:
+  name: Battery Levels
+  entities:
+     - sensor.zwave_basement_door_battery
+     - sensor.zwave_front_lock_battery
+     - sensor.zwave_front_door_battery
+     - sensor.zwave_garage_motion_battery
+     - sensor.zwave_motion1_battery
+     - sensor.zwave_pantry_door_battery
+     - sensor.zwave_sliding_door_battery
+     - sensor.zwave_stair_motion_battery
+     - sensor.zwave_stair_top_motion_battery
 

@@ -1,0 +1,24 @@
+# -----------------------------------
+#  Arrive home
+# -----------------------------------
+#
+# NOTE: multiple triggers are 'OR' value
+
+- alias: Arrive home at night
+  trigger:
+    - platform: state
+      entity_id: sensor.garage_charging_status
+      from: 'standby'
+      to: 'charging'
+    - platform: state
+      entity_id: !secret device_kyle
+      from: 'not_home'
+      to: 'home'
+  condition:
+    - condition: time
+      after: '17:00:00'
+      before: '02:00:00'
+  action:
+    - service: script.turn_on
+      entity_id: script.arrive_night
+     

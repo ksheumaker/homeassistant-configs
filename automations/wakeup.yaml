@@ -2,6 +2,7 @@
 #  Shades to wake me up
 # ---------------------------------
 - alias: Open shades 7:15A M-F
+  initial_state: 'on'
   trigger:
     platform: time
     at: '07:15:00'
@@ -14,10 +15,10 @@
        - thu
        - fri
   action:
-    service: light.turn_on
+    service: cover.set_cover_position
     data:
-      brightness: 127
+      position: 50
       entity_id: 
-        - light.shade_left
-        - light.shade_right
-        - light.shade_closet
+        - cover.master_bedroom_shade_left
+        - cover.master_bedroom_shade_right
+        - cover.master_closet_shade

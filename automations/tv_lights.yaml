@@ -2,6 +2,7 @@
 #  Turn off TV lights when TV off
 # ---------------------------------
 - alias: TV accent off with TV
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: remote.living_room
@@ -20,6 +21,7 @@
 #  Turn on TV lights when TV turned on
 # ---------------------------------
 - alias: TV accent on with TV
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: remote.living_room

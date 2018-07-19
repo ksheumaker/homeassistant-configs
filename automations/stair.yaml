@@ -2,15 +2,23 @@
 #  Stair
 # ---------------------------------
 - alias: Turn on stair with motion 
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.stair_motion_sensor
     to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.motion_stair_enable
+    state: 'on'
   action:
     service: light.turn_on
-    entity_id: light.stair
+    data_template:
+        entity_id: light.stairs_lights
+        brightness: '{{ states.input_number.motion_stair_level.state | int }}'
 
 - alias: Turn off star with no motion (2min)
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.stair_motion_sensor
@@ -19,23 +27,30 @@
       minutes: 2
   action:
     service: light.turn_off
-    entity_id: light.stair
+    entity_id: light.stairs_lights
 
 - alias: Turn on stair with motion (top)
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.stair_motion_top_sensor
     to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.motion_stair_enable
+    state: 'on'
   action:
     service: light.turn_on
-    entity_id: light.stair
-
+    data_template:
+        entity_id: light.stairs_lights
+        brightness: '{{ states.input_number.motion_stair_level.state | int }}'
  
 - alias: Turn off stair with motion (top)
+  initial_state: 'on'
   trigger:
     platform: state
     entity_id: binary_sensor.stair_motion_top_sensor
     to: 'off'
   action:
     service: light.turn_off
-    entity_id: light.stair
+    entity_id: light.stairs_lights

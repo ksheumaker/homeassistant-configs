@@ -1,0 +1,865 @@
+sensor.garage_temperature:
+  config_entry_id:
+  name: EVSE Temperature
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-temperature
+sensor.garage_voltage:
+  config_entry_id:
+  name: EVSE Voltage
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-voltage
+sensor.garage_charging_status:
+  config_entry_id:
+  name: EVSE status
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-status
+sensor.garage_energy_added:
+  config_entry_id:
+  name: EVSE Energy added
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-energy_added
+sensor.garage_watts:
+  config_entry_id:
+  name: EVSE Watts
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-watts
+sensor.garage_amps:
+  config_entry_id:
+  name: EVSE Amps
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-amps
+sensor.garage_charge_time:
+  config_entry_id:
+  name: EVSE Charge time
+  platform: juicenet
+  unique_id: 0814081809440637340117011611-charge_time
+sensor.kyles_iphone_x_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_kyles_iphone_x
+sensor.kyles_gigantic_iphone_7_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_kyles_gigantic_iphone_7
+sensor.kyles_gigantic_iphone_7_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_kyles_gigantic_iphone_7t
+sensor.kyles_gigantic_iphone_7_battery_state_2:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_kyles_gigantic_iphone_7t
+sensor.kyles_gigantic_iphone_7_battery_level_2:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_kyles_gigantic_iphone_7
+sensor.kyles_ipad_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_kyles_ipad
+sensor.kyles_ipad_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_kyles_ipad
+sensor.kyles_ipad_pro_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_kyles_ipad_pro
+sensor.kyles_ipad_pro_battery_state:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: state_kyles_ipad_pro
+sensor.kyles_iphone_x_battery_level:
+  config_entry_id:
+  name:
+  platform: ios
+  unique_id: level_kyles_iphone_x
+fan.bedroom_fan_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076299265
+switch.bookcase_left_switch:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 3-72057594093060096
+switch.bookcase_right_switch:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 4-72057594109837312
+fan.living_room_fan_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 5-72057594126630913
+sensor.front_door_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636929
+sensor.front_door_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636945
+sensor.front_door_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144636961
+sensor.front_door_access_control:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637073
+sensor.front_door_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637105
+sensor.front_door_system:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144637121
+lock.front_door_locked:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 6-72057594144391168
+binary_sensor.pantry_door_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594160349184
+sensor.pantry_door_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414145
+sensor.pantry_door_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414161
+sensor.pantry_door_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414177
+sensor.pantry_door_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 7-72057594161414305
+binary_sensor.motion_1_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177126400
+sensor.motion_1_temperature:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594177142802
+sensor.motion_1_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191361
+sensor.motion_1_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191377
+sensor.motion_1_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191393
+sensor.motion_1_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 8-72057594178191521
+binary_sensor.stair_motion_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 9-72057594193903616
+binary_sensor.stair_motion_top_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594210680832
+sensor.stair_motion_top_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745793
+sensor.stair_motion_top_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745809
+sensor.stair_motion_top_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745825
+sensor.stair_motion_top_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745953
+sensor.stair_motion_top_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 10-72057594211745969
+binary_sensor.garage_door_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594227458048
+sensor.garage_door_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523009
+sensor.garage_door_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523025
+sensor.garage_door_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523041
+sensor.garage_door_access_control:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523153
+sensor.garage_door_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523169
+sensor.garage_door_power_management:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 11-72057594228523185
+binary_sensor.basement_door_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 12-72057594244235264
+sensor.basement_door_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300225
+sensor.basement_door_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300241
+sensor.basement_door_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300257
+sensor.basement_door_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 12-72057594245300385
+binary_sensor.sliding_door_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 13-72057594261012480
+sensor.sliding_door_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077441
+sensor.sliding_door_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077457
+sensor.sliding_door_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077473
+sensor.sliding_door_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 13-72057594262077601
+binary_sensor.front_door_sensor_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 14-72057594277789696
+sensor.front_door_sensor_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854657
+sensor.front_door_sensor_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854673
+sensor.front_door_sensor_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854689
+sensor.front_door_sensor_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 14-72057594278854817
+binary_sensor.garage_motion_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594294566912
+sensor.garage_motion_temperature:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594294583314
+sensor.garage_motion_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594295631873
+sensor.garage_motion_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594295631889
+sensor.garage_motion_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594295631905
+sensor.garage_motion_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 15-72057594295632033
+switch.shop_vac_switch:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311163904
+sensor.shop_vac_energy:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311376898
+sensor.shop_vac_previous_reading:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311376914
+sensor.shop_vac_power:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311377026
+sensor.shop_vac_voltage:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311377154
+sensor.shop_vac_current:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311377218
+media_player.bedroom_apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: f4d64990e150201f5885d048353a04239c036cfdd6a0cb91e6082e1ac31ce8e0
+remote.bedroom_apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: f4d64990e150201f5885d048353a04239c036cfdd6a0cb91e6082e1ac31ce8e0
+media_player.kitchen_apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: f440a732cc54e779639fbf19d215a88f1217707f240e01f02b547bbeedeee466
+remote.kitchen_apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: f440a732cc54e779639fbf19d215a88f1217707f240e01f02b547bbeedeee466
+sensor.shop_vac_previous_reading_2:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 16-72057594311377042
+zwave.usb_controller:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.bedroom_fan:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.bookcase_left:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-3
+zwave.bookcase_right:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.living_room_fan:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-5
+zwave.front_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.pantry_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-7
+zwave.motion_1:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-8
+zwave.stair_motion:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-9
+zwave.stair_motion_top:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-10
+zwave.garage_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-11
+zwave.basement_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-12
+zwave.sliding_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-13
+zwave.front_door_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-14
+zwave.garage_motion:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-15
+zwave.shop_vac:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-16
+zwave.bathroom_motion:
+  config_entry_id:
+  name: Bathroom motion
+  platform: zwave
+  unique_id: node-17
+sensor.bathroom_motion_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186337
+sensor.bathroom_motion_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186465
+binary_sensor.bathroom_motion_sensor:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594328121344
+sensor.bathroom_motion_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186305
+sensor.bathroom_motion_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 17-72057594329186321
+zwave.closet_motion:
+  config_entry_id:
+  name: Closet motion
+  platform: zwave
+  unique_id: node-18
+sensor.closet_motion_sourcenodeid:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963553
+sensor.closet_motion_burglar:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963681
+sensor.closet_motion_alarm_type:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963521
+sensor.closet_motion_alarm_level:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: 18-72057594345963537
+binary_sensor.closet_motion_sensor:
+  config_entry_id:
+  name: Closet motion Sensor
+  platform: zwave
+  unique_id: 18-72057594344898560
+media_player.bedroom_apple_tv_2:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 42965c4d1ca15369c7dc5727fd601cf1f57dee3b2e850ccc6e96f6de5a097d44
+remote.bedroom_apple_tv_2:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 42965c4d1ca15369c7dc5727fd601cf1f57dee3b2e850ccc6e96f6de5a097d44
+binary_sensor.i3_94__rex_lights_parking:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-lights_parking
+binary_sensor.i3_94__rex_charging_status:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-charging_status
+lock.i3_94__rex_lock:
+  config_entry_id:
+  name: Car Lock
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-lock
+binary_sensor.i3_94__rex_windows:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-windows
+binary_sensor.i3_94__rex_connection_status:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-connection_status
+binary_sensor.i3_94__rex_lids:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-lids
+binary_sensor.i3_94__rex_condition_based_services:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-condition_based_services
+binary_sensor.i3_94__rex_door_lock_state:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-door_lock_state
+binary_sensor.i3_94__rex_check_control_messages:
+  config_entry_id:
+  name: Check Control
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-check_control_messages
+sensor.i3_94__rex_remaining_range_electric:
+  config_entry_id:
+  name: Range Electric
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-remaining_range_electric
+sensor.i3_94__rex_charging_level_hv:
+  config_entry_id:
+  name: Charge Level
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-charging_level_hv
+sensor.i3_94__rex_remaining_fuel:
+  config_entry_id:
+  name: Fuel Level
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-remaining_fuel
+sensor.i3_94__rex_charging_status:
+  config_entry_id:
+  name: Charging Status
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-charging_status
+sensor.i3_94__rex_max_range_electric:
+  config_entry_id:
+  name:
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-max_range_electric
+sensor.i3_94__rex_mileage:
+  config_entry_id:
+  name: Mileage
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-mileage
+sensor.i3_94__rex_remaining_range_total:
+  config_entry_id:
+  name: Range Total
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-remaining_range_total
+sensor.i3_94__rex_remaining_range_fuel:
+  config_entry_id:
+  name: Range Gas
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-remaining_range_fuel
+sensor.i3_94__rex_charging_time_remaining:
+  config_entry_id:
+  name: Charge time to 100%
+  platform: bmw_connected_drive
+  unique_id: WBY1Z8C31HV890584-charging_time_remaining
+cover.master_closet_shade:
+  config_entry_id:
+  name: Closet Shade
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_cover_f4:5e:ab:56:64:74_21
+cover.master_bedroom_shade_right:
+  config_entry_id:
+  name: Shade Right
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_cover_f4:5e:ab:56:64:74_19
+cover.master_bedroom_shade_left:
+  config_entry_id:
+  name: Shade Left
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_cover_f4:5e:ab:56:64:74_20
+scene.leaving_home:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_scene_f4:5e:ab:56:64:74_1_2
+scene.arriving_home:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_scene_f4:5e:ab:56:64:74_1_1
+switch.garage_florecent:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_switch_f4:5e:ab:56:64:74_18
+switch.garage_stair_lights:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_switch_f4:5e:ab:56:64:74_17
+sensor.downstairs_hallway_downstairs_hall_light_pico_2:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_10
+sensor.laundry_room_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_25
+sensor.upstairs_hallway_hall_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_16
+sensor.master_bedroom_shade_nightstand_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_23
+sensor.master_bedroom_shade_wall_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_22
+sensor.stairs_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_9
+sensor.kitchen_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_2
+sensor.garage_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_8
+sensor.master_bedroom_light_nightstand_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_24
+sensor.downstairs_hallway_downstairs_hall_light_pico:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_sensor_f4:5e:ab:56:64:74_7
+light.stairs_lights:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_11
+light.kitchen_lights:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_3
+light.living_room_fan_light:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_6
+light.master_closet_light:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_26
+light.upstairs_hallway_lights:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_12
+light.master_bathroom_light:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_14
+light.master_bedroom_light:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_13
+light.master_bathroom_toliet:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_15
+light.exterior_porch:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_5
+light.downstairs_hall:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_4
+switch.kitchenled:
+  config_entry_id:
+  name:
+  platform: wemo
+  unique_id: 221703K02394C3
+switch.livingroomled:
+  config_entry_id:
+  name:
+  platform: wemo
+  unique_id: 221703K031DB31
+light.dining_room_light:
+  config_entry_id:
+  name:
+  platform: lutron_caseta_pro
+  unique_id: lutron_caseta_pro_light_f4:5e:ab:56:64:74_27
+media_player.kyles_alexa_apps:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 3C605109679844FCBED46889A3B10107
+media_player.bedroom:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090LF0964921J2R
+media_player.kyles_fire_tv:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 70941607446615T0
+media_player.kyles_2nd_fire_tv:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 70941607446615TN
+media_player.my_dash:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G030K51072130531
+media_player.kitchen:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: B0F00712448400FF
+media_player.kyles_fire:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G090ME0672820708
+media_player.kyles_roav_car_charger:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: d79769362e484ab4bb9e4551b3ca0b32
+media_player.kyles_echo_spot:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: G070RR077472001W
+media_player.everywhere:
+  config_entry_id:
+  name:
+  platform: alexa
+  unique_id: 4f2f4d7716fb4cbdb2a31ccf3fdbf154

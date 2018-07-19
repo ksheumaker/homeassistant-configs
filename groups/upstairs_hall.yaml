@@ -10,11 +10,13 @@ upstairs:
 upstairs_lights:
   name: Lighting
   entities:
-    - light.upstairs_hall
-    - light.stair
+    - light.upstairs_hallway_lights
+    - light.stairs_lights
     - light.laundry
 upstairs_sensors:
   name: Sensors
   entities:
     - binary_sensor.stair_motion_sensor
     - binary_sensor.stair_motion_top_sensor
+    - input_boolean.motion_stair_enable
+    - input_number.motion_stair_level

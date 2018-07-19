@@ -1,16 +1,29 @@
 # ---------------------------------
 # Leave work
 # ---------------------------------
-#- alias: Leaving work
-#  trigger:
-#    platform: zone
-#    entity_id: !secret device_kyle
-#    zone: zone.work
-#    event: leave
-#  action:
-#    service: !secret alert_kyle
-#    data:
-#      message: >
-#        Kyle has left work
-#
+- alias: Leaving work
+  trigger:
+    platform: zone
+    entity_id: !secret device_kyle_ios
+    zone: zone.work
+    event: leave
+  condition: 
+    condition: time
+    after: "15:00:00"
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: climate.set_away_mode
+      entity_id: climate.hearth_room
+      data:
+        away_mode: false
+    - service: !secret alert_kyle
+      data:
+        message: >
+          Leaving work, HVAC away mode turned off
+
 

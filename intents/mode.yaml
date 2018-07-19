@@ -1,0 +1,8 @@
+ModeIntent:
+   action:
+     service: script.turn_on
+     data_template: 
+       entity_id: script.{{ ModeType }}
+   speech:
+     type: plain
+     text: OK

@@ -10,7 +10,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.porch
+      entity_id: light.exterior_porch
       brightness: 100
 
 - alias: Turn off porch when sun sets
@@ -21,5 +21,5 @@
     event: sunrise
   action:
     service: light.turn_off
-    entity_id: light.porch
+    entity_id: light.exterior_porch
 
