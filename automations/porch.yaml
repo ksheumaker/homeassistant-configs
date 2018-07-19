@@ -13,7 +13,7 @@
       entity_id: light.exterior_porch
       brightness: 100
 
-- alias: Turn off porch when sun sets
+- alias: Turn off porch when sun rises
   initial_state: True
   hide_entity: False
   trigger:
